@@ -1,0 +1,200 @@
+<project name="xrechnung-validation-configuration" default="dist" basedir=".">
+    <description>Build the XRechnung validation configuration for ITPLR-KoSIT validator</description>
+    <!-- set global properties for this build -->
+    <!-- main build directories -->
+    <property name="src.dir" location="${basedir}/src"/>
+    <property name="lib.dir" location="${basedir}/lib"/>
+    <property name="build.dir" location="${basedir}/build"/>
+    <property name="download.dir" location="${build.dir}/download"/>
+    <property name="dist.dir" location="${basedir}/dist"/>
+    <property name="test.src.dir" location="${src.dir}/test"/>
+    <property name="test.build.dir" location="${build.dir}/test"/>
+    <!-- Naming -->
+    <property name="dist.name" value="xgewerbeanzeige-validator-configuration"/>
+    <property name="validationtool.jar" value="validationtool-1.0.1-standalone.jar"/>
+    
+	<property name="saxon.jar" value="saxon9he.jar"/>
+    
+	
+
+  
+    <property name="xgewerbeanzeige.download.url.prefix" value="http://www.xgewerbeanzeige.de/files/files_standard/"/>
+    <property name="xgewerbeanzeige-1.3.zip" value="xgewerbeanzeige-v-1-3_2018-01-24.zip"/>
+
+    <!-- root/work directory where KoSIT validationtool expects Schema(s)-and trons -->
+    <property name="repository.dir" location="${build.dir}"/>
+    <property name="resource.dir" location="${repository.dir}/resources"/>
+    
+    <property name="schematron.url" value="https://github.com/Schematron/schematron/releases/download/2017-02-09/iso-schematron-xslt2.zip"/>
+    
+    <!-- Resource directories -->
+    <property name="reports.schema.dir" location="${resource.dir}/xsd"/>
+    
+	
+	<property name="test.docs.dir" location="${test.src.dir}/instances"/>
+    <property name="reports.dir" location="${basedir}/reports"/>
+    
+	<target name="init" description="Initializes build directory structure and ISO timestamp">
+        <!-- Create timestamps -->
+        <tstamp>
+            <format property="build.date" pattern="yyyy-MM-dd"/>
+        </tstamp>
+        
+        <echo>Build date: ${build.date}</echo>
+        <!-- Create the build directory structure used by compile -->
+        <mkdir dir="${build.dir}"/>
+	    <mkdir dir="${download.dir}"/>
+        <mkdir dir="${lib.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+    </target>
+
+    <target name="prepare-saxon" depends="init"
+        description="Download Saxon-HE and add jar to library directory">
+        <get
+            src="https://sourceforge.net/projects/saxon/files/Saxon-HE/9.8/SaxonHE9-8-0-8J.zip/download"
+            dest="${download.dir}/SaxonHE9-8-0-8J.zip" skipexisting="true"
+            usetimestamp="true"/>
+        <unzip src="${download.dir}/SaxonHE9-8-0-8J.zip" dest="${lib.dir}">
+            <patternset>
+                <include name="**/${saxon.jar}"/>
+            </patternset>
+            <flattenmapper/>
+        </unzip>
+    </target>
+
+    <target name="prepare-validationtool" depends="init"
+        description="Download KoSIT validation tool and add jar to library directory">
+        <get
+            src="https://github.com/itplr-kosit/validationtool/releases/download/validationtool-1_0_1/validationtool-dist-1.0.1-standalone.zip"
+            dest="${download.dir}" skipexisting="true" usetimestamp="true"/>
+        <unzip src="${download.dir}/validationtool-dist-1.0.1-standalone.zip" dest="${lib.dir}">
+            <patternset>
+                <include name="**/${validationtool.jar}"/>
+            </patternset>
+            <flattenmapper/>
+        </unzip>
+    </target>
+
+
+    <target name="prepare-schematron" depends="init">
+        <mkdir dir="${download.dir}/schematron"/>
+        <get
+            src="${schematron.url}"
+            dest="${download.dir}/schematron.zip" skipexisting="true" usetimestamp="true"/>
+        <unzip src="${download.dir}/schematron.zip" dest="${download.dir}/schematron/"/>
+    </target>
+    
+
+	
+	<target name="retrieve-xstatistik-xmlschema" depends="init">
+	    <mkdir dir="${download.dir}/xstatistik-2.1.0"/>
+        <get src="https://www.xrepository.de/Datei/urn:uuid:62f98658-a87a-413e-9dc8-dbee4826ed73.xsd"
+            dest="${download.dir}/xstatistik-2.1.0/xstatistik-nachrichten.xsd" skipexisting="true" usetimestamp="true"/>
+        <get src="https://www.xrepository.de/Datei/urn:uuid:16b2a9f1-a292-4cbe-bb64-f686601fc3a2.xsd"
+            dest="${download.dir}/xstatistik-2.1.0/xstatistik-baukasten.xsd" skipexisting="true" usetimestamp="true"/>
+        <get src="https://www.xrepository.de/Datei/urn:uuid:ea74b966-f52f-4ce3-9c29-a4ebf83d0b41.xsd"
+            dest="${download.dir}/xstatistik-2.1.0/xoev-basisdatentypen.xsd" skipexisting="true" usetimestamp="true"/>
+        <get src="https://www.xrepository.de/Datei/urn:uuid:cd95d6bc-1919-4bfb-91d3-e487a868d928.xsd"
+            dest="${download.dir}/xstatistik-2.1.0/xstatistik-basistypen.xsd" skipexisting="true" usetimestamp="true"/>
+    </target>
+	
+    <target name="retrieve-xgewerbeanzeige" depends="init">
+        <mkdir dir="${download.dir}/xgewerbeanzeige-1.3"/>
+        <mkdir dir="${download.dir}/xgewerbeanzeige-2.0"/>
+        
+        <get src="${xgewerbeanzeige.download.url.prefix}${xgewerbeanzeige-1.3.zip}"
+            dest="${download.dir}" skipexisting="true" usetimestamp="true"/>
+
+        <unzip src="${download.dir}/${xgewerbeanzeige-1.3.zip}" dest="${download.dir}/xgewerbeanzeige-1.3">
+            <patternset>
+                <include name="**/*.sch"/>
+            </patternset>
+        </unzip>
+        
+        <copy todir="${download.dir}/xgewerbeanzeige-2.0">
+            <fileset dir="c:/fb/svn/gewerbeverordnung/spezifikation/trunk/build/xsd">
+                <include name="*.xsd"/>
+            </fileset>
+            <fileset dir="c:/fb/svn/gewerbeverordnung/spezifikation/trunk/build/sch">
+                <include name="*.sch"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="compile-scenario" depends="init">
+        <filter token="build.date" value="${build.date}"/>
+        <filter token="xgewerbeanzeige-1.3.zip" value="${xgewerbeanzeige.download.url.prefix}${cen.download.url}"/>
+        <copy file="${src.dir}/scenarios.xml" todir="${repository.dir}" failonerror="true" filtering="true"/>
+    </target>
+    
+    <target name="compile"
+        depends="compile-scenario,retrieve-xstatistik-xmlschema,retrieve-xgewerbeanzeige,prepare-validationtool,prepare-saxon,prepare-schematron">
+        <echo>Compiling Schemas and XSLTs ...</echo>
+        
+        
+        <copy file="${src.dir}/default-report.xsl" todir="${resource.dir}"/>
+        <!-- Following unzip also creates ${resource.dir}/xsd directory-->
+        <unzip src="${lib.dir}/${validationtool.jar}" dest="${build.dir}">
+            <patternset>
+                <include name="xsd/scenarios.xsd"/>
+            </patternset>
+        </unzip>
+        <copy file="${src.dir}/report.xsd" todir="${build.dir}/xsd"/>
+		<copy todir="${resource.dir}/xgewerbeanzeige-1.2">
+		    <fileset dir="${download.dir}/xstatistik-2.1.0">
+    			<include name="*.xsd"/>
+		    </fileset>
+		</copy>		
+        <copy todir="${resource.dir}/xgewerbeanzeige-1.3">
+            <fileset dir="${download.dir}/xstatistik-2.1.0">
+                <include name="*.xsd"/>
+            </fileset>
+        </copy>		
+        
+        <copy todir="${resource.dir}/xgewerbeanzeige-2.0">
+            <fileset dir="${download.dir}/xgewerbeanzeige-2.0">
+                <include name="*.xsd"/>
+                <include name="*.sch"/>
+            </fileset>
+        </copy>		
+        
+        <xslt in="${download.dir}/xgewerbeanzeige-1.3/00041740059999000001.sch"
+            out="${resource.dir}/xgewerbeanzeige-1.2/00041740059999000001.xsl"
+            style="${download.dir}/schematron/iso_svrl_for_xslt2.xsl">
+            <classpath location="${lib.dir}/${saxon.jar}"/>
+            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+            <param name="generate-fired-rule" expression="false"/>
+            <param name="full-path-notation" expression="3"/>
+        </xslt>
+
+        <xslt in="${download.dir}/xgewerbeanzeige-1.3/00041840059999000001.sch"
+            out="${resource.dir}/xgewerbeanzeige-1.3/00041840059999000001.xsl"
+            style="${download.dir}/schematron/iso_svrl_for_xslt2.xsl">
+            <classpath location="${lib.dir}/${saxon.jar}"/>
+            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+            <param name="generate-fired-rule" expression="false"/>
+            <param name="full-path-notation" expression="3"/>
+        </xslt>
+        
+        <xslt in="${download.dir}/xgewerbeanzeige-2.0/spezifikation.sch"
+            out="${resource.dir}/xgewerbeanzeige-2.0/spezifikation.xsl"
+            style="${download.dir}/schematron/iso_svrl_for_xslt2.xsl">
+            <classpath location="${lib.dir}/${saxon.jar}"/>
+            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+            <param name="generate-fired-rule" expression="false"/>
+            <param name="full-path-notation" expression="3"/>
+        </xslt>
+        
+    </target>
+	
+    <target name="dist" depends="compile" description="Generate the distribution">
+        <zip destfile="${dist.dir}/validator-configuration-xgewerbeanzeige_${build.date}.zip" basedir="${build.dir}"
+            excludes="download/**,test"/>
+    </target>
+    <target name="clean" description="clean up">
+        <!-- Delete the ${build} and ${dist} directory trees -->
+        <delete dir="${build.dir}" verbose="true" includeEmptyDirs="true"/>
+        <delete dir="${dist.dir}"/>
+        <delete dir="${reports.dir}"/>
+    </target>
+</project>

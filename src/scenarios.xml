@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenarios xmlns="http://www.xoev.de/de/validator/framework/1/scenarios" frameworkVersion="1.0.0">
+    <name>Prüftool-Konfiguration XGewerbeanzeige 1.3</name>
+    <author>DGUV</author>
+    <date>2018-02-19</date>
+    <description>
+        <p>Prüfung von Dokumenten auf Konformität zum Standard XGewerbeanzeige 1.3 (https://www.xgewerbeanzeige.de).</p>
+    </description>
+
+    <scenario>
+        <name>Gewerbeanzeige 1.2 DATML/RAW</name>
+        <namespace prefix="raw">http://www.destatis.de/schema/datml-raw/2.0/de</namespace>
+        <match>/raw:DatML-RAW-D[raw:nachricht[1]/raw:berichtszeitraum
+            ['2017-05' le concat(format-number(xs:integer(raw:jahr),'0000'),'-',format-number(xs:integer(raw:monat),'00')) and 
+             '2018-05' gt concat(format-number(xs:integer(raw:jahr),'0000'),'-',format-number(xs:integer(raw:monat),'00'))]]</match>
+        <validateWithXmlSchema>
+            <resource>
+                <name>XML Schema für DATML/RAW</name>
+                <location>resources/xgewerbeanzeige-1.2/xstatistik-nachrichten.xsd</location>
+            </resource>
+        </validateWithXmlSchema>
+        <validateWithSchematron>
+            <resource>
+                <name>Schematron Regeln Liefervereinbarung 1.2</name>
+                <location>resources/xgewerbeanzeige-1.2/00041740059999000001.xsl</location>
+            </resource>
+        </validateWithSchematron>
+        <createReport>
+            <resource>
+                <name>Standard-Prüfbericht</name>
+                <location>resources/default-report.xsl</location>
+            </resource>
+        </createReport>
+    </scenario>
+    
+    <scenario>
+        <name>Gewerbeanzeige 1.3 DATML/RAW</name>
+        <namespace prefix="raw">http://www.destatis.de/schema/datml-raw/2.0/de</namespace>
+        <match>/raw:DatML-RAW-D[raw:nachricht[1]/raw:berichtszeitraum
+            ['2018-05' le concat(format-number(xs:integer(raw:jahr),'0000'),'-',format-number(xs:integer(raw:monat),'00'))]]</match>
+        <validateWithXmlSchema>
+            <resource>
+                <name>XML Schema für DATML/RAW</name>
+                <location>resources/xgewerbeanzeige-1.3/xstatistik-nachrichten.xsd</location>
+            </resource>
+        </validateWithXmlSchema>
+        <validateWithSchematron>
+            <resource>
+                <name>Schematron Regeln Liefervereinbarung 1.3</name>
+                <location>resources/xgewerbeanzeige-1.3/00041840059999000001.xsl</location>
+            </resource>
+        </validateWithSchematron>
+        <createReport>
+            <resource>
+                <name>Standard-Prüfbericht</name>
+                <location>resources/default-report.xsl</location>
+            </resource>
+        </createReport>
+    </scenario>
+    
+    <scenario>
+        <name>Gewerbeanzeige 2.0</name>
+        <namespace prefix="xga">http://www.xgewerbeanzeige.de/spezifikation/2.0</namespace>
+        <match>/xga:*</match>
+        <validateWithXmlSchema>
+            <resource>
+                <name>XGewerbeanzeige 2.0 XML Schema</name>
+                <location>resources/xgewerbeanzeige-2.0/xgewerbeanzeige.xsd</location>
+            </resource>
+        </validateWithXmlSchema>
+        <validateWithSchematron>
+            <resource>
+                <name>XGewerbeanzeige 2.0 Schematron</name>
+                <location>resources/xgewerbeanzeige-2.0/spezifikation.xsl</location>
+            </resource>
+        </validateWithSchematron>
+        <createReport>
+            <resource>
+                <name>Standard-Prüfbericht</name>
+                <location>resources/default-report.xsl</location>
+            </resource>
+        </createReport>
+    </scenario>
+
+    <noScenarioReport>
+        <resource>
+            <name>Default Report</name>
+            <location>resources/default-report.xsl</location>
+        </resource>
+    </noScenarioReport>    
+
+</scenarios>
