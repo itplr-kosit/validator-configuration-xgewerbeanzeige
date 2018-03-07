@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xga:ea.gewerbemeldung.0220 xmlns:xga="http://www.xgewerbeanzeige.de/spezifikation/2.0"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            xsi:schemaLocation="http://www.xgewerbeanzeige.de/spezifikation/2.0&#xA;                ../../build/xsd/xgewerbeanzeige.xsd"
+                            produkt="XGA-Testsuite"
+                            produkthersteller="KoSIT"
+                            produktversion="2017"
+                            standard="XGewerbeanzeige"
+                            version="2.0"
+                            test="100">
+   <xga:nachrichtenkopf>
+      <xga:identifikation.nachricht>
+         <xga:nachrichtenUUID>00000000-0000-0000-0000-000000000001</xga:nachrichtenUUID>
+         <xga:nachrichtentyp>
+            <code>0220</code>
+         </xga:nachrichtentyp>
+         <xga:erstellungszeitpunkt>2018-02-20T13:14:21.0</xga:erstellungszeitpunkt>
+      </xga:identifikation.nachricht>
+      <xga:leser>
+         <xga:behoerdenkennung>
+            <xga:praefix listVersionID="7">
+               <code>xga</code>
+            </xga:praefix>
+            <xga:kennung listURI="urn:xoev-de:xgewerbeanzeige:codeliste:datenempfaenger"
+                         listVersionID="1">
+               <code>000492949</code>
+            </xga:kennung>
+         </xga:behoerdenkennung>
+         <xga:behoerdenname>Testleser-Behörde</xga:behoerdenname>
+         <!--Der Behördenname wird momentan als Literal erzeugt, nicht dynamisch aus der Quelle!-->
+      </xga:leser>
+      <xga:autor>
+         <xga:behoerdenkennung>
+            <xga:praefix listVersionID="7">
+               <code>MELDID</code>
+            </xga:praefix>
+            <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
+                         listVersionID="2018-01-31">
+               <code>12052000</code>
+               <name>Cottbus, Stadt</name>
+            </xga:kennung>
+         </xga:behoerdenkennung>
+         <xga:erreichbarkeit>
+            <xga:kanal>
+               <code>01</code>
+            </xga:kanal>
+            <xga:kennung>muster@wob.de</xga:kennung>
+         </xga:erreichbarkeit>
+         <xga:erreichbarkeit>
+            <xga:kanal>
+               <code>02</code>
+            </xga:kanal>
+            <xga:kennung>030-1212</xga:kennung>
+         </xga:erreichbarkeit>
+         <xga:anschrift>
+            <xga:strasse>Musterstr.</xga:strasse>
+            <xga:hausNr>42</xga:hausNr>
+            <xga:ort>Musterstadt</xga:ort>
+            <xga:plz>99999</xga:plz>
+         </xga:anschrift>
+         <xga:behoerdenname>Testverwaltung</xga:behoerdenname>
+      </xga:autor>
+   </xga:nachrichtenkopf>
+   <xga:berichtszeitraum>2018-12</xga:berichtszeitraum>
+   <xga:satz><!-- Testfall: 01.02 | Datensatz: A | Meldungsart: Anmeldung | Zustand: alpha -->
+      <xga:anmeldung>
+         <xga:satzErstellung>2016-07-04T17:54:42.0</xga:satzErstellung>
+         <xga:autor>
+            <xga:behoerdenkennung>
+               <xga:praefix listVersionID="7">
+                  <code>MELDID</code>
+               </xga:praefix>
+               <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
+                            listVersionID="2018-01-31">
+                  <code>12052000</code>
+               </xga:kennung>
+            </xga:behoerdenkennung>
+            <xga:erreichbarkeit>
+               <xga:kanal>
+                  <code>01</code>
+               </xga:kanal>
+               <xga:kennung>muster@wob.de</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:erreichbarkeit>
+               <xga:kanal>
+                  <code>02</code>
+               </xga:kanal>
+               <xga:kennung>030-1212</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:anschrift>
+               <xga:strasse>Musterstr.</xga:strasse>
+               <xga:hausNr>42</xga:hausNr>
+               <xga:ort>Musterstadt</xga:ort>
+               <xga:plz>99999</xga:plz>
+            </xga:anschrift>
+            <xga:behoerdenname>Testgemeinde</xga:behoerdenname>
+         </xga:autor>
+         <xga:istKorrektur>
+            <code>0</code>
+         </xga:istKorrektur>
+         <xga:gemeindeSchluessel listVersionID="2017-09-30">
+            <code>12052000</code>
+         </xga:gemeindeSchluessel>
+         <xga:gemeindeMeldungNr>2015 1023</xga:gemeindeMeldungNr>
+         <xga:gewerbebetriebID>0c9003a6-5b4f-4a99-98ae-b2b915708c1d</xga:gewerbebetriebID>
+         <xga:uuid>5687CF4A-5C7B-43F1-933E-E5A7F69F7967</xga:uuid>
+         <xga:gewerbe>
+            <xga:betrieb>
+               <xga:eingetragenerName>Tibor Pick e.K.</xga:eingetragenerName>
+               <xga:rechtsformSchluessel>
+                  <code>170</code>
+               </xga:rechtsformSchluessel>
+            </xga:betrieb>
+            <xga:anschrift>
+               <xga:strasse>Spremberger Str.</xga:strasse>
+               <xga:strassenschluessel>0000001801</xga:strassenschluessel>
+               <xga:hausNrVon>90</xga:hausNrVon>
+               <xga:ort>Cottbus</xga:ort>
+               <xga:plz>03046</xga:plz>
+               <xga:nationSchluessel>276</xga:nationSchluessel>
+               <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+               <xga:telefonVorwahl>0355</xga:telefonVorwahl>
+               <xga:telefonNummer>333555</xga:telefonNummer>
+               <xga:faxVorwahl>0355</xga:faxVorwahl>
+               <xga:faxNummer>333556</xga:faxNummer>
+               <xga:eMailAdresse>pick-friseur@online.de</xga:eMailAdresse>
+               <xga:webAdresse>http://pick-friseur.de</xga:webAdresse>
+            </xga:anschrift>
+            <xga:beteiligtePerson>
+               <xga:personFunktion>
+                  <code>1</code>
+               </xga:personFunktion>
+               <xga:familienname>Pick</xga:familienname>
+               <xga:vorname>Tibor</xga:vorname>
+            </xga:beteiligtePerson>
+         </xga:gewerbe>
+         <xga:gueltigAb>2012-04-01</xga:gueltigAb>
+         <xga:taetigkeitenGesamt>
+            <xga:schwerpunkt>
+               <xga:taetigkeitSchwerpunkt>Friseur</xga:taetigkeitSchwerpunkt>
+               <xga:taetigkeitSchluessel>96021</xga:taetigkeitSchluessel>
+               <xga:stichwort>Friseurgewerbe (Damen- und Herrenfriseursalons)</xga:stichwort>
+            </xga:schwerpunkt>
+            <xga:weitereTaetigkeiten>
+               <xga:taetigkeitenZusammengefasst>Verkauf von Haarpflegeprodukten, Make-up-Beratung</xga:taetigkeitenZusammengefasst>
+               <xga:taetigkeit>
+                  <xga:taetigkeitSchluessel>47750</xga:taetigkeitSchluessel>
+                  <xga:stichwort>Haarbehandlungsmittel, zubereitete, Einzelhandel</xga:stichwort>
+               </xga:taetigkeit>
+               <xga:taetigkeit>
+                  <xga:taetigkeitSchluessel>96022</xga:taetigkeitSchluessel>
+                  <xga:stichwort>Typstylist</xga:stichwort>
+               </xga:taetigkeit>
+            </xga:weitereTaetigkeiten>
+         </xga:taetigkeitenGesamt>
+      </xga:anmeldung>
+   </xga:satz>
+</xga:ea.gewerbemeldung.0220>
