@@ -185,6 +185,12 @@
             <param name="full-path-notation" expression="3"/>
         </xslt>
         
+        <copy todir="${build.dir}/beispiele">
+            <fileset dir="beispiele">
+                <include name="**/*"/>
+            </fileset>
+        </copy>
+        
     </target>
 	
     <target name="dist" depends="compile" description="Generate the distribution">
