@@ -7,7 +7,7 @@ Die Konfiguration beinhaltet Prüfszenarien für:
 
  * XGewerbeanzeige 1.2
  * XGewerbeanzeige 1.3
- * XGewerbeanzeige 2.0
+ * XGewerbeanzeige 2.0 ENTWURF
 
 Eine detaillierte Beschreibung des Prüftools findet sich [hier](/validator/README.md). 
 
