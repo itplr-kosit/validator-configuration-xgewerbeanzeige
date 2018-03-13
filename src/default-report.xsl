@@ -429,6 +429,12 @@
                 td.level6{
                 padding-left: 25mm;
                 }
+                td.level7{
+                padding-left: 30mm;
+                }
+                td.level8{
+                padding-left: 35mm;
+                }
                 
                 tr{
                 vertical-align: bottom;
