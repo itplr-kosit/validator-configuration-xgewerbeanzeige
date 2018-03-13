@@ -16,7 +16,7 @@ Eine detaillierte Beschreibung des Prüftools findet sich [hier](/validator/READ
 1. Die [Stand-alone Fassung des
 Prüftools](https://github.com/itplr-kosit/validator/releases/download/validationtool-1_0_1/validationtool-dist-1.0.1-standalone.zip)  herunterladen und
 auspacken.
-2. Die [Prüftool-Konfiguration XGewerbeanzeige](https://github.com/itplr-kosit/validator-configuration-xgewerbeanzeige/releases/download/release-2018-03-07/validator-configuration-xgewerbeanzeige_2018-03-07.zip) herunterladen und auspacken.
+2. Die [Prüftool-Konfiguration XGewerbeanzeige](https://github.com/itplr-kosit/validator-configuration-xgewerbeanzeige/releases/download/release-2018-03-13/validator-configuration-xgewerbeanzeige_2018-03-13.zip) herunterladen und auspacken.
 3. Mitgelieferte Beispielinstanzen validieren:
 ```
 java -jar validationtool-1.0.1-standalone.jar -s scenarios.xml -o reports -h beispiele/*.xml
