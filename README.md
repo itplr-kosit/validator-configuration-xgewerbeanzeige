@@ -9,7 +9,7 @@ Die Konfiguration beinhaltet Prüfszenarien für:
  * XGewerbeanzeige 1.3
  * XGewerbeanzeige 2.0 ENTWURF
 
-Eine detaillierte Beschreibung des Prüftools findet sich [hier](/validator/README.md). 
+Eine detaillierte Beschreibung des Prüftools findet sich [hier](https://github.com/itplr-kosit/validator). 
 
 ## Schnellstart
 
