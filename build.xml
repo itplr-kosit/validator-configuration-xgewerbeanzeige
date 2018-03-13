@@ -1,5 +1,5 @@
 <project name="xrechnung-validation-configuration" default="dist" basedir=".">
-    <description>Build the XRechnung validation configuration for ITPLR-KoSIT validator</description>
+    <description>Build XGewerbeanzeige validator configuration</description>
     <!-- set global properties for this build -->
     <!-- main build directories -->
     <property name="src.dir" location="${basedir}/src"/>
