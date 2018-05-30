@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xga:alg.gewerbemeldung.0300 xmlns:xga="http://www.xgewerbeanzeige.de/spezifikation/2.0"
-   produkt="XGA-Testsuite"
-   produkthersteller="KoSIT"
-   produktversion="2017"
-   standard="XGewerbeanzeige"
-   version="2.0"
-   test="100">
+                             produkt="XGA-Testsuite"
+                             produkthersteller="KoSIT"
+                             produktversion="2017"
+                             standard="XGewerbeanzeige"
+                             version="2.0"
+                             test="100">
    <xga:nachrichtenkopf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <xga:identifikation.nachricht>
          <xga:nachrichtenUUID>00000000-0000-0000-0000-000000000001</xga:nachrichtenUUID>
@@ -20,8 +20,9 @@
                <code>xga</code>
             </xga:praefix>
             <xga:kennung listURI="urn:xoev-de:xgewerbeanzeige:codeliste:empfangsstellen"
-               listVersionID="2018-01-31">
+                         listVersionID="2017-10-04">
                <code>000492949</code>
+               <name>(KEIN CODELISTEN-LITERAL ZUGEORDNET!)</name>
             </xga:kennung>
          </xga:behoerdenkennung>
          <xga:behoerdenname>(KEINE LESENDE BEHÖRDE ANGEGEBEN IN QUELLNACHRICHT)</xga:behoerdenname>
@@ -32,8 +33,9 @@
                <code>MELDID</code>
             </xga:praefix>
             <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
-               listVersionID="2018-01-31">
+                         listVersionID="2018-01-31">
                <code>12052000</code>
+               <name>Cottbus, Stadt</name>
             </xga:kennung>
          </xga:behoerdenkennung>
          <xga:erreichbarkeit>
@@ -67,8 +69,9 @@
                   <code>MELDID</code>
                </xga:praefix>
                <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
-                  listVersionID="2018-01-31">
+                            listVersionID="2018-01-31">
                   <code>12052000</code>
+                  <name>Cottbus, Stadt</name>
                </xga:kennung>
             </xga:behoerdenkennung>
             <xga:erreichbarkeit>
@@ -143,11 +146,6 @@
             <xga:istNebenerwerb>
                <code>0</code>
             </xga:istNebenerwerb>
-            <xga:handwerkskarte>
-               <xga:status>
-                  <code>3</code>
-               </xga:status>
-            </xga:handwerkskarte>
             <xga:anschrift>
                <xga:strasse>Spremberger Str.</xga:strasse>
                <xga:strassenschluessel>0000001801</xga:strassenschluessel>
@@ -156,12 +154,6 @@
                <xga:plz>03046</xga:plz>
                <xga:nationSchluessel>276</xga:nationSchluessel>
                <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
-               <xga:telefonVorwahl>0355</xga:telefonVorwahl>
-               <xga:telefonNummer>333555</xga:telefonNummer>
-               <xga:faxVorwahl>0355</xga:faxVorwahl>
-               <xga:faxNummer>333556</xga:faxNummer>
-               <xga:eMailAdresse>pick-friseur@online.de</xga:eMailAdresse>
-               <xga:webAdresse>http://pick-friseur.de</xga:webAdresse>
             </xga:anschrift>
             <xga:beteiligtePerson>
                <xga:personFunktion>
@@ -169,7 +161,7 @@
                </xga:personFunktion>
                <xga:familienname>Pick</xga:familienname>
                <xga:vorname>Tibor</xga:vorname>
-               <xga:geschlecht>
+               <xga:geschlecht listVersionID="1">
                   <code>1</code>
                </xga:geschlecht>
                <xga:geburtsname>Rodríguez</xga:geburtsname>
@@ -188,8 +180,6 @@
                   <xga:plz>03044</xga:plz>
                   <xga:nationSchluessel>276</xga:nationSchluessel>
                   <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
-                  <xga:telefonVorwahl>0355</xga:telefonVorwahl>
-                  <xga:telefonNummer>141455</xga:telefonNummer>
                </xga:anschrift>
                <xga:aufenthaltsgenehmigung>
                   <xga:status>
@@ -211,9 +201,8 @@
                <xga:stichwort>Friseurgewerbe (Damen- und Herrenfriseursalons)</xga:stichwort>
             </xga:schwerpunkt>
             <xga:weitereTaetigkeiten>
-               <xga:taetigkeitenZusammengefasst>Verkauf von Haarpflegeprodukten, Make-up-Beratung</xga:taetigkeitenZusammengefasst>
+               <xga:taetigkeitenZusammengefasst>Make-up-Beratung</xga:taetigkeitenZusammengefasst>
                <xga:taetigkeit>
-                  <xga:taetigkeitEinzeln>Verkauf von Haarpflegeprodukten</xga:taetigkeitEinzeln>
                   <xga:taetigkeitSchluessel>47750</xga:taetigkeitSchluessel>
                   <xga:stichwort>Haarbehandlungsmittel, zubereitete, Einzelhandel</xga:stichwort>
                </xga:taetigkeit>

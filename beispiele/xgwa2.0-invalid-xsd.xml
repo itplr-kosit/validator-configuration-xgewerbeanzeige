@@ -116,7 +116,7 @@
                <xga:eintragungArt>
                   <code>V</code>
                </xga:eintragungArt>
-               <xga:gerichtSchluessel>
+               <xga:gerichtSchluessel listVersionID="3">
                   <code>G1207</code>
                </xga:gerichtSchluessel>
                <xga:rechtsformSchluessel>
@@ -172,7 +172,7 @@
                </xga:personFunktion>
                <xga:familienname>Färber</xga:familienname>
                <xga:vorname>Hugo</xga:vorname>
-               <xga:geschlecht>
+               <xga:geschlecht listVersionID="1">
                   <code>1</code>
                </xga:geschlecht>
                <xga:geburtsdatum>31121960</xga:geburtsdatum>
@@ -200,7 +200,7 @@
                </xga:personFunktion>
                <xga:familienname>Wittbach</xga:familienname>
                <xga:vorname>Rolf</xga:vorname>
-               <xga:geschlecht>
+               <xga:geschlecht listVersionID="1">
                   <code>1</code>
                </xga:geschlecht>
                <xga:geburtsdatum>15061960</xga:geburtsdatum>
@@ -226,7 +226,7 @@
                </xga:personFunktion>
                <xga:familienname>Becht</xga:familienname>
                <xga:vorname>Gunnar</xga:vorname>
-               <xga:geschlecht>
+               <xga:geschlecht listVersionID="1">
                   <code>1</code>
                </xga:geschlecht>
                <xga:geburtsdatum>11091955</xga:geburtsdatum>
@@ -252,7 +252,7 @@
                </xga:personFunktion>
                <xga:familienname>Seibert</xga:familienname>
                <xga:vorname>Siegrun</xga:vorname>
-               <xga:geschlecht>
+               <xga:geschlecht listVersionID="1">
                   <code>2</code>
                </xga:geschlecht>
                <xga:geburtsdatum>19031948</xga:geburtsdatum>
@@ -347,7 +347,7 @@
                <xga:eintragungArt>
                   <code>V</code>
                </xga:eintragungArt>
-               <xga:gerichtSchluessel>
+               <xga:gerichtSchluessel listVersionID="3">
                   <code>G1207</code>
                </xga:gerichtSchluessel>
                <xga:rechtsformSchluessel>
@@ -404,7 +404,7 @@
                </xga:personFunktion>
                <xga:familienname>Färber</xga:familienname>
                <xga:vorname>Hugo</xga:vorname>
-               <xga:geschlecht>
+               <xga:geschlecht listVersionID="1">
                   <code>1</code>
                </xga:geschlecht>
                <xga:geburtsdatum>31121960</xga:geburtsdatum>
@@ -432,7 +432,7 @@
                </xga:personFunktion>
                <xga:familienname>Wittbach</xga:familienname>
                <xga:vorname>Rolf</xga:vorname>
-               <xga:geschlecht>
+               <xga:geschlecht listVersionID="1">
                   <code>1</code>
                </xga:geschlecht>
                <xga:geburtsdatum>15061960</xga:geburtsdatum>
@@ -458,7 +458,7 @@
                </xga:personFunktion>
                <xga:familienname>Becht</xga:familienname>
                <xga:vorname>Gunnar</xga:vorname>
-               <xga:geschlecht>
+               <xga:geschlecht listVersionID="1">
                   <code>1</code>
                </xga:geschlecht>
                <xga:geburtsdatum>11091955</xga:geburtsdatum>
@@ -484,7 +484,7 @@
                </xga:personFunktion>
                <xga:familienname>Seibert</xga:familienname>
                <xga:vorname>Siegrun</xga:vorname>
-               <xga:geschlecht>
+               <xga:geschlecht listVersionID="1">
                   <code>2</code>
                </xga:geschlecht>
                <xga:geburtsdatum>19031948</xga:geburtsdatum>

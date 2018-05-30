@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xga:ea.gewerbemeldung.0220 xmlns:xga="http://www.xgewerbeanzeige.de/spezifikation/2.0"
-                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                            xsi:schemaLocation="http://www.xgewerbeanzeige.de/spezifikation/2.0&#xA;                ../../build/xsd/xgewerbeanzeige.xsd"
-                            produkt="XGA-Testsuite"
-                            produkthersteller="KoSIT"
-                            produktversion="2017"
-                            standard="XGewerbeanzeige"
-                            version="2.0"
-                            test="100">
-   <xga:nachrichtenkopf>
+<xga:alg.gewerbemeldung.0300 xmlns:xga="http://www.xgewerbeanzeige.de/spezifikation/2.0"
+   produkt="XGA-Testsuite"
+   produkthersteller="KoSIT"
+   produktversion="2017"
+   standard="XGewerbeanzeige"
+   version="2.0"
+   test="100">
+   <xga:nachrichtenkopf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <xga:identifikation.nachricht>
          <xga:nachrichtenUUID>00000000-0000-0000-0000-000000000001</xga:nachrichtenUUID>
          <xga:nachrichtentyp>
-            <code>0220</code>
+            <code>0300</code>
          </xga:nachrichtentyp>
          <xga:erstellungszeitpunkt>2018-02-20T13:14:21.0</xga:erstellungszeitpunkt>
       </xga:identifikation.nachricht>
@@ -21,13 +19,13 @@
             <xga:praefix listVersionID="7">
                <code>xga</code>
             </xga:praefix>
-            <xga:kennung listURI="urn:xoev-de:xgewerbeanzeige:codeliste:datenempfaenger"
-                         listVersionID="1">
+            <xga:kennung listURI="urn:xoev-de:xgewerbeanzeige:codeliste:empfangsstellen"
+               listVersionID="2017-10-04">
                <code>000492949</code>
+               <name>(KEIN CODELISTEN-LITERAL ZUGEORDNET!)</name>
             </xga:kennung>
          </xga:behoerdenkennung>
-         <xga:behoerdenname>Testleser-Behörde</xga:behoerdenname>
-         <!--Der Behördenname wird momentan als Literal erzeugt, nicht dynamisch aus der Quelle!-->
+         <xga:behoerdenname>(KEINE LESENDE BEHÖRDE ANGEGEBEN IN QUELLNACHRICHT)</xga:behoerdenname>
       </xga:leser>
       <xga:autor>
          <xga:behoerdenkennung>
@@ -35,7 +33,7 @@
                <code>MELDID</code>
             </xga:praefix>
             <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
-                         listVersionID="2018-01-31">
+               listVersionID="2018-01-31">
                <code>12052000</code>
                <name>Cottbus, Stadt</name>
             </xga:kennung>
@@ -61,8 +59,8 @@
          <xga:behoerdenname>Testverwaltung</xga:behoerdenname>
       </xga:autor>
    </xga:nachrichtenkopf>
-   <xga:berichtszeitraum>2018-12</xga:berichtszeitraum>
-   <xga:satz><!-- Testfall: 01.02 | Datensatz: A | Meldungsart: Anmeldung | Zustand: alpha -->
+   <xga:berichtszeitraum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2018-12</xga:berichtszeitraum>
+   <xga:satz xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><!-- Testfall: 01.02 | Datensatz: A | Meldungsart: Anmeldung | Zustand: alpha -->
       <xga:anmeldung>
          <xga:satzErstellung>2016-07-04T17:54:42.0</xga:satzErstellung>
          <xga:autor>
@@ -71,8 +69,9 @@
                   <code>MELDID</code>
                </xga:praefix>
                <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
-                            listVersionID="2018-01-31">
-                  <code>13052000</code>
+                  listVersionID="2018-01-31">
+                  <code>12052000</code>
+                  <name>Cottbus, Stadt</name>
                </xga:kennung>
             </xga:behoerdenkennung>
             <xga:erreichbarkeit>
@@ -107,34 +106,85 @@
          <xga:gewerbe>
             <xga:betrieb>
                <xga:eingetragenerName>Tibor Pick e.K.</xga:eingetragenerName>
+               <xga:eintragungNr>11111</xga:eintragungNr>
+               <xga:eintragungOrt>Cottbus</xga:eintragungOrt>
+               <xga:eintragungPLZ>03046</xga:eintragungPLZ>
+               <xga:eintragungArt>
+                  <code>A</code>
+               </xga:eintragungArt>
+               <xga:gerichtSchluessel listVersionID="3">
+                  <code>
+                     G1103
+                  </code>
+               </xga:gerichtSchluessel>
                <xga:rechtsformSchluessel>
-                  <code>170</code>
+                  <code>270</code>
                </xga:rechtsformSchluessel>
             </xga:betrieb>
-            <xga:anschrift>
-               <xga:strasse>Spremberger Str.</xga:strasse>
-               <xga:strassenschluessel>0000001801</xga:strassenschluessel>
-               <xga:hausNrVon>90</xga:hausNrVon>
-               <xga:ort>Cottbus</xga:ort>
-               <!--<xga:plz>03046</xga:plz>-->
-               <xga:nationSchluessel>276</xga:nationSchluessel>
-               <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
-               <xga:telefonVorwahl>0355</xga:telefonVorwahl>
-               <xga:telefonNummer>333555</xga:telefonNummer>
-               <xga:faxVorwahl>0355</xga:faxVorwahl>
-               <xga:faxNummer>333556</xga:faxNummer>
-               <xga:eMailAdresse>pick-friseur@online.de</xga:eMailAdresse>
-               <xga:webAdresse>http://pick-friseur.de</xga:webAdresse>
-            </xga:anschrift>
+            <xga:anzahlVollzeitBeschaeftigte>0</xga:anzahlVollzeitBeschaeftigte>
+            <xga:anzahlTeilzeitBeschaeftigte>2</xga:anzahlTeilzeitBeschaeftigte>
+            <xga:betriebArt>
+               <xga:industrie>
+                  <code>0</code>
+               </xga:industrie>
+               <xga:handwerk>
+                  <code>1</code>
+               </xga:handwerk>
+               <xga:handel>
+                  <code>0</code>
+               </xga:handel>
+               <xga:sonstiges>
+                  <code>0</code>
+               </xga:sonstiges>
+            </xga:betriebArt>
+            <xga:niederlassungArt>
+               <code>1</code>
+            </xga:niederlassungArt>
+            <xga:istReisegewerbe>
+               <code>0</code>
+            </xga:istReisegewerbe>
+            <xga:istNebenerwerb>
+               <code>0</code>
+            </xga:istNebenerwerb>
             <xga:beteiligtePerson>
                <xga:personFunktion>
                   <code>1</code>
                </xga:personFunktion>
                <xga:familienname>Pick</xga:familienname>
                <xga:vorname>Tibor</xga:vorname>
+               <xga:geschlecht listVersionID="1">
+                  <code>1</code>
+               </xga:geschlecht>
+               <xga:geburtsname>Rodríguez</xga:geburtsname>
+               <xga:geburtsdatum>12101965</xga:geburtsdatum>
+               <xga:geburtsort>Santiago</xga:geburtsort>
+               <xga:geburtsland>Chile</xga:geburtsland>
+               <xga:staatangehoerigkeiten>
+                  <xga:staatsangehoerigkeitSchluessel listVersionID="2017-01-01">
+                     <code>332</code>
+                  </xga:staatsangehoerigkeitSchluessel>
+               </xga:staatangehoerigkeiten>
+               <xga:anschrift>
+                  <xga:strasse>Ewald-Hase-Str.</xga:strasse>
+                  <xga:hausNrVon>4</xga:hausNrVon>
+                  <xga:ort>Cottbus</xga:ort>
+                  <xga:plz>03044</xga:plz>
+                  <xga:nationSchluessel>276</xga:nationSchluessel>
+                  <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+               </xga:anschrift>
+               <xga:aufenthaltsgenehmigung>
+                  <xga:status>
+                     <code>1</code>
+                  </xga:status>
+                  <xga:ausgestelltAm>2002-01-02</xga:ausgestelltAm>
+                  <xga:ausgestelltVonName>Stadt Cottbus</xga:ausgestelltVonName>
+                  <xga:ausgestelltVonPLZ>03044</xga:ausgestelltVonPLZ>
+                  <xga:ausgestelltVonOrt>Cottbus</xga:ausgestelltVonOrt>
+               </xga:aufenthaltsgenehmigung>
             </xga:beteiligtePerson>
          </xga:gewerbe>
          <xga:gueltigAb>2012-04-01</xga:gueltigAb>
+         <xga:datumMeldung>2012-04-02</xga:datumMeldung>
          <xga:taetigkeitenGesamt>
             <xga:schwerpunkt>
                <xga:taetigkeitSchwerpunkt>Friseur</xga:taetigkeitSchwerpunkt>
@@ -142,17 +192,21 @@
                <xga:stichwort>Friseurgewerbe (Damen- und Herrenfriseursalons)</xga:stichwort>
             </xga:schwerpunkt>
             <xga:weitereTaetigkeiten>
-               <xga:taetigkeitenZusammengefasst>Verkauf von Haarpflegeprodukten, Make-up-Beratung</xga:taetigkeitenZusammengefasst>
+               <xga:taetigkeitenZusammengefasst>Make-up-Beratung</xga:taetigkeitenZusammengefasst>
                <xga:taetigkeit>
                   <xga:taetigkeitSchluessel>47750</xga:taetigkeitSchluessel>
                   <xga:stichwort>Haarbehandlungsmittel, zubereitete, Einzelhandel</xga:stichwort>
                </xga:taetigkeit>
                <xga:taetigkeit>
+                  <xga:taetigkeitEinzeln>Make-up-Beratung</xga:taetigkeitEinzeln>
                   <xga:taetigkeitSchluessel>96022</xga:taetigkeitSchluessel>
                   <xga:stichwort>Typstylist</xga:stichwort>
                </xga:taetigkeit>
             </xga:weitereTaetigkeiten>
          </xga:taetigkeitenGesamt>
+         <xga:grundAnmeldungSchluessel>
+            <code>01</code>
+         </xga:grundAnmeldungSchluessel>
       </xga:anmeldung>
    </xga:satz>
-</xga:ea.gewerbemeldung.0220>
+</xga:alg.gewerbemeldung.0300>
