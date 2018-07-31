@@ -18,8 +18,8 @@
 	
 
   
-    <property name="xgewerbeanzeige.download.url.prefix" value="http://www.xgewerbeanzeige.de/files/files_standard/"/>
-    <property name="xgewerbeanzeige-1.3.zip" value="xgewerbeanzeige-v-1-3_2018-01-24.zip"/>
+    <property name="xgewerbeanzeige.download.url.prefix" value="http://xgewerbeanzeige.de/wp-content/uploads/2018/05/"/>
+    <property name="xgewerbeanzeige-1.3.zip" value="xgewerbeanzeige-v-1-3_2018-03-19.zip"/>
 
     <!-- root/work directory where KoSIT validationtool expects Schema(s)-and trons -->
     <property name="repository.dir" location="${build.dir}"/>
@@ -65,7 +65,7 @@
     <target name="prepare-validationtool" depends="init"
         description="Download KoSIT validation tool and add jar to library directory">
         <get
-            src="https://github.com/itplr-kosit/validationtool/releases/download/validationtool-1_0_1/validationtool-dist-1.0.1-standalone.zip"
+            src="https://github.com/itplr-kosit/validator/releases/download/validationtool-1_0_1/validationtool-dist-1.0.1-standalone.zip"
             dest="${download.dir}" skipexisting="true" usetimestamp="true"/>
         <unzip src="${download.dir}/validationtool-dist-1.0.1-standalone.zip" dest="${lib.dir}">
             <patternset>
