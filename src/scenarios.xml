@@ -8,7 +8,7 @@
     </description>
 
     <scenario>
-        <name>Gewerbeanzeige 1.2 DATML/RAW</name>
+        <name>XGewerbeanzeige 1.2 DATML/RAW</name>
         <namespace prefix="raw">http://www.destatis.de/schema/datml-raw/2.0/de</namespace>
         <match>/raw:DatML-RAW-D[raw:nachricht[1]/raw:berichtszeitraum
             ['2017-05' le concat(format-number(xs:integer(raw:jahr),'0000'),'-',format-number(xs:integer(raw:monat),'00')) and 
@@ -34,7 +34,7 @@
     </scenario>
     
     <scenario>
-        <name>Gewerbeanzeige 1.3 DATML/RAW</name>
+        <name>XGewerbeanzeige 1.3 DATML/RAW</name>
         <namespace prefix="raw">http://www.destatis.de/schema/datml-raw/2.0/de</namespace>
         <match>/raw:DatML-RAW-D[raw:nachricht[1]/raw:berichtszeitraum
             ['2018-05' le concat(format-number(xs:integer(raw:jahr),'0000'),'-',format-number(xs:integer(raw:monat),'00'))]]</match>
@@ -59,7 +59,7 @@
     </scenario>
     
     <scenario>
-        <name>Gewerbeanzeige 2.0 ENTWURF</name>
+        <name>XGewerbeanzeige 2.0</name>
         <namespace prefix="xga">http://www.xgewerbeanzeige.de/spezifikation/2.0</namespace>
         <match>/xga:*</match>
         <validateWithXmlSchema>
