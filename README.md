@@ -1,6 +1,6 @@
 # Prüftoolkonfiguration XGewerbeanzeige
 
-Experimentelle Konfiguration für das von der KoSIT im Auftrag des IT-Planungsrates herausgegebene Prüftool, 
+Konfiguration für das von der KoSIT im Auftrag des IT-Planungsrates herausgegebene Prüftool, 
 welches die Konformität von XML-Dokumenten gegen Schema und Schematron prüft.
 
 Die Konfiguration beinhaltet Prüfszenarien für:
