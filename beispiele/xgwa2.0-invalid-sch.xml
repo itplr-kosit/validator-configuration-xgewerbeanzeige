@@ -59,7 +59,6 @@
          <xga:behoerdenname>Testverwaltung</xga:behoerdenname>
       </xga:autor>
    </xga:nachrichtenkopf>
-   <xga:berichtszeitraum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2018-12</xga:berichtszeitraum>
    <xga:satz xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><!-- Testfall: 01.02 | Datensatz: A | Meldungsart: Anmeldung | Zustand: alpha -->
       <xga:anmeldung>
          <xga:satzErstellung>2016-07-04T17:54:42.0</xga:satzErstellung>
@@ -172,7 +171,7 @@
                   <xga:nationSchluessel>276</xga:nationSchluessel>
                   <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
                </xga:anschrift>
-               <xga:aufenthaltsgenehmigung>
+               <xga:aufenthaltstitel>
                   <xga:status>
                      <code>1</code>
                   </xga:status>
@@ -180,7 +179,7 @@
                   <xga:ausgestelltVonName>Stadt Cottbus</xga:ausgestelltVonName>
                   <xga:ausgestelltVonPLZ>03044</xga:ausgestelltVonPLZ>
                   <xga:ausgestelltVonOrt>Cottbus</xga:ausgestelltVonOrt>
-               </xga:aufenthaltsgenehmigung>
+               </xga:aufenthaltstitel>
             </xga:beteiligtePerson>
          </xga:gewerbe>
          <xga:gueltigAb>2012-04-01</xga:gueltigAb>
