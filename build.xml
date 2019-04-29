@@ -18,9 +18,12 @@
 	
 
   
-    <property name="xgewerbeanzeige.download.url.prefix" value="http://xgewerbeanzeige.de/wp-content/uploads/2018/05/"/>
+    <property name="xgewerbeanzeige-1.3.download.url.prefix" value="http://xgewerbeanzeige.de/wp-content/uploads/2018/05/"/>
     <property name="xgewerbeanzeige-1.3.zip" value="xgewerbeanzeige-v-1-3_2018-03-19.zip"/>
 
+    <property name="xgewerbeanzeige-2.0.download.url.prefix" value="https://xgewerbeanzeige.de/wp-content/uploads/2019/02/"/>
+    <property name="xgewerbeanzeige-2.0.zip" value="2019-02-21-XGewerbeanzeige.v2.0.zip"/>
+    
     <!-- root/work directory where KoSIT validationtool expects Schema(s)-and trons -->
     <property name="repository.dir" location="${build.dir}"/>
     <property name="resource.dir" location="${repository.dir}/resources"/>
@@ -101,17 +104,23 @@
     <target name="retrieve-xgewerbeanzeige" depends="init">
         <mkdir dir="${download.dir}/xgewerbeanzeige-1.3"/>
         <mkdir dir="${download.dir}/xgewerbeanzeige-2.0"/>
+        <mkdir dir="${download.dir}/xgewerbeanzeige-2.1"/>
         
-        <get src="${xgewerbeanzeige.download.url.prefix}${xgewerbeanzeige-1.3.zip}"
-            dest="${download.dir}" skipexisting="true" usetimestamp="true"/>
-
+        <get src="${xgewerbeanzeige-1.3.download.url.prefix}${xgewerbeanzeige-1.3.zip}" dest="${download.dir}" skipexisting="true" usetimestamp="true"/>
         <unzip src="${download.dir}/${xgewerbeanzeige-1.3.zip}" dest="${download.dir}/xgewerbeanzeige-1.3">
             <patternset>
                 <include name="**/*.sch"/>
             </patternset>
         </unzip>
         
-        <copy todir="${download.dir}/xgewerbeanzeige-2.0">
+        <get src="${xgewerbeanzeige-2.0.download.url.prefix}${xgewerbeanzeige-2.0.zip}" dest="${download.dir}" skipexisting="true" usetimestamp="true"/>
+        <unzip src="${download.dir}/${xgewerbeanzeige-2.0.zip}" dest="${download.dir}/xgewerbeanzeige-2.0">
+            <patternset>
+                <include name="**/*.sch"/>
+            </patternset>
+        </unzip>
+        
+        <copy todir="${download.dir}/xgewerbeanzeige-2.1">
             <fileset dir="c:/fb/svn/gewerbeverordnung/spezifikation/trunk/build/xsd">
                 <include name="*.xsd"/>
             </fileset>
@@ -157,6 +166,12 @@
             </fileset>
         </copy>		
         
+        <copy todir="${resource.dir}/xgewerbeanzeige-2.1">
+            <fileset dir="${download.dir}/xgewerbeanzeige-2.1">
+                <include name="*.xsd"/>
+                <include name="*.sch"/>
+            </fileset>
+        </copy>		
         <xslt in="${download.dir}/xgewerbeanzeige-1.3/00041740059999000001.sch"
             out="${resource.dir}/xgewerbeanzeige-1.2/00041740059999000001.xsl"
             style="${download.dir}/schematron/iso_svrl_for_xslt2.xsl">
@@ -177,6 +192,15 @@
         
         <xslt in="${download.dir}/xgewerbeanzeige-2.0/spezifikation.sch"
             out="${resource.dir}/xgewerbeanzeige-2.0/spezifikation.xsl"
+            style="${download.dir}/schematron/iso_svrl_for_xslt2.xsl">
+            <classpath location="${lib.dir}/${saxon.jar}"/>
+            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+            <param name="generate-fired-rule" expression="false"/>
+            <param name="full-path-notation" expression="3"/>
+        </xslt>
+        
+        <xslt in="${download.dir}/xgewerbeanzeige-2.1/spezifikation.sch"
+            out="${resource.dir}/xgewerbeanzeige-2.1/spezifikation.xsl"
             style="${download.dir}/schematron/iso_svrl_for_xslt2.xsl">
             <classpath location="${lib.dir}/${saxon.jar}"/>
             <factory name="net.sf.saxon.TransformerFactoryImpl"/>

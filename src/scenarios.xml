@@ -4,10 +4,11 @@
     <author>KoSIT</author>
     <date>@build.date@</date>
     <description>
-        <p>Prüfung von Dokumenten auf Konformität zum Standard XGewerbeanzeige (https://www.xgewerbeanzeige.de) in allen Versionen ab 1.2.</p>
+        <p>Prüfung von Dokumenten auf Konformität zum Standard XGewerbeanzeige (https://www.xgewerbeanzeige.de) in allen Versionen ab 1.3.</p>
     </description>
 
-    <scenario>
+    <!-- Bei Bedarf Auskommentierung entfernen -->
+    <!--<scenario>
         <name>XGewerbeanzeige 1.2 DATML/RAW</name>
         <namespace prefix="raw">http://www.destatis.de/schema/datml-raw/2.0/de</namespace>
         <match>/raw:DatML-RAW-D[raw:nachricht[1]/raw:berichtszeitraum
@@ -31,7 +32,7 @@
                 <location>resources/default-report.xsl</location>
             </resource>
         </createReport>
-    </scenario>
+    </scenario>-->
     
     <scenario>
         <name>XGewerbeanzeige 1.3 DATML/RAW</name>
@@ -81,6 +82,31 @@
             </resource>
         </createReport>
     </scenario>
+    
+    <scenario>
+        <name>XGewerbeanzeige 2.1</name>
+        <namespace prefix="xga">http://www.xgewerbeanzeige.de/spezifikation/2.1</namespace>
+        <match>/xga:*</match>
+        <validateWithXmlSchema>
+            <resource>
+                <name>XGewerbeanzeige 2.1 XML Schema</name>
+                <location>resources/xgewerbeanzeige-2.1/xgewerbeanzeige.xsd</location>
+            </resource>
+        </validateWithXmlSchema>
+        <validateWithSchematron>
+            <resource>
+                <name>XGewerbeanzeige 2.1 Schematron</name>
+                <location>resources/xgewerbeanzeige-2.1/spezifikation.xsl</location>
+            </resource>
+        </validateWithSchematron>
+        <createReport>
+            <resource>
+                <name>Standard-Prüfbericht</name>
+                <location>resources/default-report.xsl</location>
+            </resource>
+        </createReport>
+    </scenario>
+    
 
     <noScenarioReport>
         <resource>
