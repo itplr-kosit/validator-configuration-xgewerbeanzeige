@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SCH-0036_NE-1
+   
+   exists(xga:gewerbe/xga:betriebArt)
+   
+   . := lue.satz/anmeldung
+   a := "exists(xga:gewerbe/xga:betriebArt)"                  
+   
+   1. Positivfall PO-1: a   
+   1. Negativfall NE-1: NICHT(a)   
+-->
+<xga:lue.gewerbemeldung.0290 xmlns:xga="http://www.xgewerbeanzeige.de/spezifikation/2.1"
+                             produkt="XGA-Testsuite"
+                             produkthersteller="KoSIT"
+                             produktversion="2017"
+                             standard="XGewerbeanzeige"
+                             version="2.1"
+                             test="100">
+   <xga:nachrichtenkopf>
+      <xga:identifikation.nachricht>
+         <xga:nachrichtenUUID>00000000-0000-0000-0000-000000000001</xga:nachrichtenUUID>
+         <xga:nachrichtentyp>
+            <code>0290</code>
+         </xga:nachrichtentyp>
+         <xga:erstellungszeitpunkt>2018-05-18T13:15:12.0</xga:erstellungszeitpunkt>
+      </xga:identifikation.nachricht>
+      <xga:leser>
+         <xga:behoerdenkennung>
+            <xga:praefix listVersionID="7">
+               <code>xga</code>
+            </xga:praefix>
+            <xga:kennung listURI="urn:xoev-de:xgewerbeanzeige:codeliste:weiterekommunikationspartner"
+                         listVersionID="2019-01-11">
+               <code>000492949</code>
+               <name>(KEIN CODELISTEN-LITERAL ZUGEORDNET!)</name>
+            </xga:kennung>
+         </xga:behoerdenkennung>
+         <xga:behoerdenname>(KEINE LESENDE BEHÖRDE ANGEGEBEN IN QUELLNACHRICHT)</xga:behoerdenname>
+      </xga:leser>
+      <xga:autor>
+         <xga:behoerdenkennung>
+            <xga:praefix listVersionID="7">
+               <code>MELDID</code>
+            </xga:praefix>
+            <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
+                         listVersionID="2018-01-31">
+               <code>12052000</code>
+               <name>Cottbus, Stadt</name>
+            </xga:kennung>
+         </xga:behoerdenkennung>
+         <xga:erreichbarkeit>
+            <xga:kanal>
+               <code>01</code>
+            </xga:kanal>
+            <xga:kennung>muster@wob.de</xga:kennung>
+         </xga:erreichbarkeit>
+         <xga:erreichbarkeit>
+            <xga:kanal>
+               <code>02</code>
+            </xga:kanal>
+            <xga:kennung>030-1212</xga:kennung>
+         </xga:erreichbarkeit>
+         <xga:anschrift>
+            <xga:strasse>Musterstr.</xga:strasse>
+            <xga:hausNr>42</xga:hausNr>
+            <xga:ort>Musterstadt</xga:ort>
+            <xga:plz>99999</xga:plz>
+         </xga:anschrift>
+         <xga:behoerdenname>Testverwaltung</xga:behoerdenname>
+      </xga:autor>
+   </xga:nachrichtenkopf>
+   
+   <xga:satz><!-- Testfall: 01.17 | Datensatz: A | Meldungsart: Anmeldung | Zustand: alpha -->
+      <xga:anmeldung>
+         <xga:satzErstellung>2016-07-08T12:00:29.0</xga:satzErstellung>
+         <xga:ereigniszeitpunkt>2016-07-08T11:59:59</xga:ereigniszeitpunkt>
+         <xga:autor>
+            <xga:behoerdenkennung>
+               <xga:praefix listVersionID="7">
+                  <code>MELDID</code>
+               </xga:praefix>
+               <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
+                            listVersionID="2018-01-31">
+                  <code>12052000</code>
+                  <name>Cottbus, Stadt</name>
+               </xga:kennung>
+            </xga:behoerdenkennung>
+            <xga:erreichbarkeit>
+               <xga:kanal>
+                  <code>01</code>
+               </xga:kanal>
+               <xga:kennung>muster@wob.de</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:erreichbarkeit>
+               <xga:kanal>
+                  <code>02</code>
+               </xga:kanal>
+               <xga:kennung>030-1212</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:anschrift>
+               <xga:strasse>Musterstr.</xga:strasse>
+               <xga:hausNr>42</xga:hausNr>
+               <xga:ort>Musterstadt</xga:ort>
+               <xga:plz>99999</xga:plz>
+            </xga:anschrift>
+            <xga:behoerdenname>Testgemeinde</xga:behoerdenname>
+         </xga:autor>
+         <xga:istKorrektur>
+            <code>0</code>
+         </xga:istKorrektur>
+         <xga:gemeindeSchluessel listVersionID="2017-09-30">
+            <code>12052000</code>
+         </xga:gemeindeSchluessel>
+         <xga:gemeindeMeldungNr>2005 1022</xga:gemeindeMeldungNr>
+         <xga:gewerbebetriebID>127d72e3-48fe-4982-a6e6-968a0c193df0</xga:gewerbebetriebID>
+         <xga:uuid>96C4EF05-83C6-4850-A09C-CA2D762CBCC3</xga:uuid>
+         <xga:gewerbe>
+            <xga:betrieb>
+               <xga:ID>1</xga:ID>
+               <xga:eingetragenerName>Klausberg Import GmbH</xga:eingetragenerName>
+               <xga:eintragungNr>18874</xga:eintragungNr>
+               <xga:eintragungOrt>Cottbus</xga:eintragungOrt>
+               <xga:eintragungPLZ>03046</xga:eintragungPLZ>
+               <xga:eintragungArt>
+                  <code>B</code>
+               </xga:eintragungArt>
+               <xga:gerichtSchluessel listVersionID="3">
+                  <code>
+                     G1103
+                  </code>
+               </xga:gerichtSchluessel>
+               <xga:rechtsformSchluessel>
+                  <code>350</code>
+               </xga:rechtsformSchluessel>
+            </xga:betrieb>
+            <xga:anzahlVollzeitBeschaeftigte>4</xga:anzahlVollzeitBeschaeftigte>
+            <xga:anzahlTeilzeitBeschaeftigte>1</xga:anzahlTeilzeitBeschaeftigte>
+            <!-- NICHT(a) -->
+            <!--<xga:betriebArt>
+               <xga:industrie>
+                  <code>0</code>
+               </xga:industrie>
+               <xga:handwerk>
+                  <code>0</code>
+               </xga:handwerk>
+               <xga:handel>
+                  <code>1</code>
+               </xga:handel>
+               <xga:sonstiges>
+                  <code>0</code>
+               </xga:sonstiges>
+            </xga:betriebArt>-->
+            <xga:niederlassungArt>
+               <code>3</code>
+            </xga:niederlassungArt>
+            <xga:istReisegewerbe>
+               <code>0</code>
+            </xga:istReisegewerbe>
+            <xga:istNebenerwerb>
+               <code>0</code>
+            </xga:istNebenerwerb>
+            <xga:anschrift>
+               <xga:strasse>Karl-Marx-Str.</xga:strasse>
+               <xga:strassenschluessel>0000001701</xga:strassenschluessel>
+               <xga:hausNrVon>68</xga:hausNrVon>
+               <xga:ort>Cottbus</xga:ort>
+               <xga:plz>03045</xga:plz>
+               <xga:nationSchluessel>276</xga:nationSchluessel>
+               <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+            </xga:anschrift>
+            <xga:erreichbarkeit>
+               <xga:kanal>
+                  <code>01</code>
+               </xga:kanal>
+               <xga:kennung>klausberg@wob.com</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:hauptniederlassung>
+                  <xga:anschrift>
+                  <xga:strasse>Sielower Chaussee</xga:strasse>
+                  <xga:hausNrVon>100</xga:hausNrVon>
+                  <xga:hausNrBis>102a</xga:hausNrBis>
+                  <xga:anschriftZusatz>1. Hinterhof, 2. Aufgang</xga:anschriftZusatz>
+                  <xga:ort>Cottbus</xga:ort>
+                  <xga:ortsteil>Sielow</xga:ortsteil>
+                  <xga:plz>03055</xga:plz>
+                  <xga:nationSchluessel>276</xga:nationSchluessel>
+                  <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+               </xga:anschrift>
+               <xga:erreichbarkeit>
+                  <xga:kanal>
+                     <code>01</code>
+                  </xga:kanal>
+                  <xga:kennung>hermes@sielow.de</xga:kennung>
+               </xga:erreichbarkeit>
+            </xga:hauptniederlassung>
+            <xga:beteiligtePerson>
+               <xga:personFunktion>
+                  <code>3</code>
+               </xga:personFunktion>
+               <xga:familienname>Young</xga:familienname>
+               <xga:vorname>John</xga:vorname>
+               <xga:geschlecht listVersionID="1">
+                  <code>
+                     1
+                  </code>
+               </xga:geschlecht>
+               <xga:geburtsdatum>12101960</xga:geburtsdatum>
+               <xga:geburtsort>Boston</xga:geburtsort>
+               <xga:geburtsland>U.S.A.</xga:geburtsland>
+               <xga:anschrift>
+                  <xga:strasse>Schillerstr.</xga:strasse>
+                  <xga:hausNrVon>14</xga:hausNrVon>
+                  <xga:ort>Cottbus</xga:ort>
+                  <xga:plz>03046</xga:plz>
+                  <xga:nationSchluessel>276</xga:nationSchluessel>
+                  <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+               </xga:anschrift>
+               <xga:erreichbarkeit>
+                  <xga:kanal>
+                     <code>01</code>
+                  </xga:kanal>
+                  <xga:kennung>young@aol.com</xga:kennung>
+               </xga:erreichbarkeit>
+            </xga:beteiligtePerson>
+            <xga:beteiligungOeffentlicheHand>                
+               <code>0</code>             
+            </xga:beteiligungOeffentlicheHand>          
+         </xga:gewerbe>
+         <xga:gueltigAb>2012-10-14</xga:gueltigAb>
+         <xga:datumMeldung>2012-10-15</xga:datumMeldung>
+         <xga:taetigkeitenGesamt>
+            <xga:schwerpunkt>
+               <xga:taetigkeitSchwerpunkt>Einzelhandel mit Weinen und Tabakwaren</xga:taetigkeitSchwerpunkt>
+               <xga:taetigkeitSchluessel>47250</xga:taetigkeitSchluessel>
+               <xga:stichwort>Wein, Eh.</xga:stichwort>
+            </xga:schwerpunkt>
+            <xga:weitereTaetigkeiten>
+               <xga:taetigkeitenZusammengefasst>Hermes Paketshop|Handel mit Presseartikeln</xga:taetigkeitenZusammengefasst>
+               <xga:taetigkeit>
+                  <xga:taetigkeitSchluessel>53200</xga:taetigkeitSchluessel>
+                  <xga:stichwort>Paketdienste, private, für Frachtsendungen bis zu einem Höchstgewicht von 31,5 kg</xga:stichwort>
+               </xga:taetigkeit>
+               <xga:taetigkeit>
+                  <xga:taetigkeitSchluessel>47621</xga:taetigkeitSchluessel>
+                  <xga:stichwort>Druckerzeugnisse (Zeitschriften und Zeitungen), Eh.</xga:stichwort>
+               </xga:taetigkeit>
+            </xga:weitereTaetigkeiten>
+         </xga:taetigkeitenGesamt>
+         <xga:grundAnmeldungSchluessel>
+            <code>01</code>
+         </xga:grundAnmeldungSchluessel>
+      </xga:anmeldung>
+   </xga:satz>
+   <xga:satz><!-- Testfall: 01.17 | Datensatz: B | Meldungsart: Ummeldung | Zustand: beta -->
+      <xga:ummeldung>
+         <xga:satzErstellung>2016-07-08T12:00:29.0</xga:satzErstellung>
+         <xga:ereigniszeitpunkt>2016-07-08T11:59:59</xga:ereigniszeitpunkt>
+         <xga:autor>
+            <xga:behoerdenkennung>
+               <xga:praefix listVersionID="7">
+                  <code>MELDID</code>
+               </xga:praefix>
+               <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
+                            listVersionID="2018-01-31">
+                  <code>12052000</code>
+                  <name>Cottbus, Stadt</name>
+               </xga:kennung>
+            </xga:behoerdenkennung>
+            <xga:erreichbarkeit>
+               <xga:kanal>
+                  <code>01</code>
+               </xga:kanal>
+               <xga:kennung>muster@wob.de</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:erreichbarkeit>
+               <xga:kanal>
+                  <code>02</code>
+               </xga:kanal>
+               <xga:kennung>030-1212</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:anschrift>
+               <xga:strasse>Musterstr.</xga:strasse>
+               <xga:hausNr>42</xga:hausNr>
+               <xga:ort>Musterstadt</xga:ort>
+               <xga:plz>99999</xga:plz>
+            </xga:anschrift>
+            <xga:behoerdenname>Testgemeinde</xga:behoerdenname>
+         </xga:autor>
+         <xga:istKorrektur>
+            <code>0</code>
+         </xga:istKorrektur>
+         <xga:gemeindeSchluessel listVersionID="2017-09-30">
+            <code>12052000</code>
+         </xga:gemeindeSchluessel>
+         <xga:gemeindeMeldungNr>2005 1022</xga:gemeindeMeldungNr>
+         <xga:gewerbebetriebID>127d72e3-48fe-4982-a6e6-968a0c193df0</xga:gewerbebetriebID>
+         <xga:uuid>94825315-4301-44a9-8743-b50ce0093a14</xga:uuid>
+         <xga:gewerbe>
+            <xga:betrieb>
+               <xga:ID>1</xga:ID>
+               <xga:eingetragenerName>Young GmbH</xga:eingetragenerName>
+               <xga:eintragungNr>18874</xga:eintragungNr>
+               <xga:eintragungOrt>Cottbus</xga:eintragungOrt>
+               <xga:eintragungPLZ>03046</xga:eintragungPLZ>
+               <xga:eintragungArt>
+                  <code>B</code>
+               </xga:eintragungArt>
+               <xga:gerichtSchluessel listVersionID="3">
+                  <code>
+                     G1103
+                  </code>
+               </xga:gerichtSchluessel>
+               <xga:rechtsformSchluessel>
+                  <code>350</code>
+               </xga:rechtsformSchluessel>
+            </xga:betrieb>
+            <xga:anzahlVollzeitBeschaeftigte>4</xga:anzahlVollzeitBeschaeftigte>
+            <xga:anzahlTeilzeitBeschaeftigte>1</xga:anzahlTeilzeitBeschaeftigte>
+            <xga:betriebArt>
+               <xga:industrie>
+                  <code>0</code>
+               </xga:industrie>
+               <xga:handwerk>
+                  <code>0</code>
+               </xga:handwerk>
+               <xga:handel>
+                  <code>1</code>
+               </xga:handel>
+               <xga:sonstiges>
+                  <code>0</code>
+               </xga:sonstiges>
+            </xga:betriebArt>
+            <xga:niederlassungArt>
+               <code>3</code>
+            </xga:niederlassungArt>
+            <xga:istReisegewerbe>
+               <code>0</code>
+            </xga:istReisegewerbe>
+            <xga:istNebenerwerb>
+               <code>0</code>
+            </xga:istNebenerwerb>
+            <xga:anschrift>
+               <xga:strasse>Karl-Marx-Str.</xga:strasse>
+               <xga:strassenschluessel>0000001701</xga:strassenschluessel>
+               <xga:hausNrVon>68</xga:hausNrVon>
+               <xga:ort>Cottbus</xga:ort>
+               <xga:plz>03045</xga:plz>
+               <xga:nationSchluessel>276</xga:nationSchluessel>
+               <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+            </xga:anschrift>
+            <xga:erreichbarkeit>
+               <xga:kanal>
+                  <code>01</code>
+               </xga:kanal>
+               <xga:kennung>klausberg@wob.com</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:hauptniederlassung>
+                  <xga:anschrift>
+                  <xga:strasse>Sielower Chaussee</xga:strasse>
+                  <xga:hausNrVon>100</xga:hausNrVon>
+                  <xga:hausNrBis>102a</xga:hausNrBis>
+                  <xga:anschriftZusatz>1. Hinterhof, 2. Aufgang</xga:anschriftZusatz>
+                  <xga:ort>Cottbus</xga:ort>
+                  <xga:ortsteil>Sielow</xga:ortsteil>
+                  <xga:plz>03055</xga:plz>
+                  <xga:nationSchluessel>276</xga:nationSchluessel>
+                  <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+               </xga:anschrift>
+               <xga:erreichbarkeit>
+                  <xga:kanal>
+                     <code>01</code>
+                  </xga:kanal>
+                  <xga:kennung>hermes@sielow.de</xga:kennung>
+               </xga:erreichbarkeit>
+            </xga:hauptniederlassung>
+            <xga:beteiligtePerson>
+               <xga:personFunktion>
+                  <code>3</code>
+               </xga:personFunktion>
+               <xga:familienname>Young</xga:familienname>
+               <xga:vorname>John</xga:vorname>
+               <xga:geschlecht listVersionID="1">
+                  <code>
+                     1
+                  </code>
+               </xga:geschlecht>
+               <xga:geburtsdatum>12101960</xga:geburtsdatum>
+               <xga:geburtsort>Boston</xga:geburtsort>
+               <xga:geburtsland>U.S.A.</xga:geburtsland>
+               <xga:anschrift>
+                  <xga:strasse>Schillerstr.</xga:strasse>
+                  <xga:hausNrVon>14</xga:hausNrVon>
+                  <xga:ort>Cottbus</xga:ort>
+                  <xga:plz>03046</xga:plz>
+                  <xga:nationSchluessel>276</xga:nationSchluessel>
+                  <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+               </xga:anschrift>
+               <xga:erreichbarkeit>
+                  <xga:kanal>
+                     <code>01</code>
+                  </xga:kanal>
+                  <xga:kennung>young@aol.com</xga:kennung>
+               </xga:erreichbarkeit>
+            </xga:beteiligtePerson>
+            <xga:beteiligungOeffentlicheHand>                
+               <code>0</code>             
+            </xga:beteiligungOeffentlicheHand>          
+         </xga:gewerbe>
+         <xga:gueltigAb>2012-11-01</xga:gueltigAb>
+         <xga:datumMeldung>2012-11-01</xga:datumMeldung>
+         <xga:taetigkeitenGesamt>
+            <xga:schwerpunkt>
+               <xga:taetigkeitSchwerpunkt>Einzelhandel mit Weinen und Tabakwaren</xga:taetigkeitSchwerpunkt>
+               <xga:taetigkeitSchluessel>47250</xga:taetigkeitSchluessel>
+               <xga:stichwort>Wein, Eh.</xga:stichwort>
+               <xga:neuAusgeuebt>
+                  <code>0</code>
+               </xga:neuAusgeuebt>
+            </xga:schwerpunkt>
+            <xga:weitereTaetigkeiten>
+               <xga:taetigkeitenZusammengefasst>Hermes Paketshop|Handel mit Presseartikeln</xga:taetigkeitenZusammengefasst>
+               <xga:taetigkeit>
+                  <xga:taetigkeitSchluessel>53200</xga:taetigkeitSchluessel>
+                  <xga:stichwort>Paketdienste, private, für Frachtsendungen bis zu einem Höchstgewicht von 31,5 kg</xga:stichwort>
+               </xga:taetigkeit>
+               <xga:taetigkeit>
+                  <xga:taetigkeitSchluessel>47621</xga:taetigkeitSchluessel>
+                  <xga:stichwort>Druckerzeugnisse (Zeitschriften und Zeitungen), Eh.</xga:stichwort>
+               </xga:taetigkeit>
+            </xga:weitereTaetigkeiten>
+         </xga:taetigkeitenGesamt>
+         <xga:gruendeUmmeldung>
+            <xga:grundUmmeldungSchluessel>
+               <code>03</code>
+            </xga:grundUmmeldungSchluessel>
+         </xga:gruendeUmmeldung>
+      </xga:ummeldung>
+   </xga:satz>
+   <xga:satz><!-- Testfall: 01.17 | Datensatz: C | Meldungsart: Abmeldung | Zustand: gamma -->
+      <xga:abmeldung>
+         <xga:satzErstellung>2016-07-08T12:00:29.0</xga:satzErstellung>
+         <xga:ereigniszeitpunkt>2016-07-08T11:59:59</xga:ereigniszeitpunkt>
+         <xga:autor>
+            <xga:behoerdenkennung>
+               <xga:praefix listVersionID="7">
+                  <code>MELDID</code>
+               </xga:praefix>
+               <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
+                            listVersionID="2018-01-31">
+                  <code>12052000</code>
+                  <name>Cottbus, Stadt</name>
+               </xga:kennung>
+            </xga:behoerdenkennung>
+            <xga:erreichbarkeit>
+               <xga:kanal>
+                  <code>01</code>
+               </xga:kanal>
+               <xga:kennung>muster@wob.de</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:erreichbarkeit>
+               <xga:kanal>
+                  <code>02</code>
+               </xga:kanal>
+               <xga:kennung>030-1212</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:anschrift>
+               <xga:strasse>Musterstr.</xga:strasse>
+               <xga:hausNr>42</xga:hausNr>
+               <xga:ort>Musterstadt</xga:ort>
+               <xga:plz>99999</xga:plz>
+            </xga:anschrift>
+            <xga:behoerdenname>Testgemeinde</xga:behoerdenname>
+         </xga:autor>
+         <xga:istKorrektur>
+            <code>0</code>
+         </xga:istKorrektur>
+         <xga:gemeindeSchluessel listVersionID="2017-09-30">
+            <code>12052000</code>
+         </xga:gemeindeSchluessel>
+         <xga:gemeindeMeldungNr>2005 1022</xga:gemeindeMeldungNr>
+         <xga:gewerbebetriebID>127d72e3-48fe-4982-a6e6-968a0c193df0</xga:gewerbebetriebID>
+         <xga:uuid>96C4EF05-83C6-4850-A09C-CA2D762CBCC3</xga:uuid>
+         <xga:gewerbe>
+            <xga:betrieb>
+               <xga:ID>1</xga:ID>
+               <xga:eingetragenerName>Young GmbH</xga:eingetragenerName>
+               <xga:eintragungNr>18874</xga:eintragungNr>
+               <xga:eintragungOrt>Cottbus</xga:eintragungOrt>
+               <xga:eintragungPLZ>03046</xga:eintragungPLZ>
+               <xga:eintragungArt>
+                  <code>B</code>
+               </xga:eintragungArt>
+               <xga:gerichtSchluessel listVersionID="3">
+                  <code>
+                     G1103
+                  </code>
+               </xga:gerichtSchluessel>
+               <xga:rechtsformSchluessel>
+                  <code>350</code>
+               </xga:rechtsformSchluessel>
+            </xga:betrieb>
+            <xga:anzahlVollzeitBeschaeftigte>4</xga:anzahlVollzeitBeschaeftigte>
+            <xga:anzahlTeilzeitBeschaeftigte>1</xga:anzahlTeilzeitBeschaeftigte>
+            <xga:betriebArt>
+               <xga:industrie>
+                  <code>0</code>
+               </xga:industrie>
+               <xga:handwerk>
+                  <code>0</code>
+               </xga:handwerk>
+               <xga:handel>
+                  <code>1</code>
+               </xga:handel>
+               <xga:sonstiges>
+                  <code>0</code>
+               </xga:sonstiges>
+            </xga:betriebArt>
+            <xga:niederlassungArt>
+               <code>3</code>
+            </xga:niederlassungArt>
+            <xga:istReisegewerbe>
+               <code>0</code>
+            </xga:istReisegewerbe>
+            <xga:istNebenerwerb>
+               <code>0</code>
+            </xga:istNebenerwerb>
+            <xga:anschrift>
+               <xga:strasse>Karl-Marx-Str.</xga:strasse>
+               <xga:strassenschluessel>0000001701</xga:strassenschluessel>
+               <xga:hausNrVon>68</xga:hausNrVon>
+               <xga:ort>Cottbus</xga:ort>
+               <xga:plz>03045</xga:plz>
+               <xga:nationSchluessel>276</xga:nationSchluessel>
+               <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+            </xga:anschrift>
+            <xga:erreichbarkeit>
+               <xga:kanal>
+                  <code>01</code>
+               </xga:kanal>
+               <xga:kennung>klausberg@wob.com</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:hauptniederlassung>
+                  <xga:anschrift>
+                  <xga:strasse>Sielower Chaussee</xga:strasse>
+                  <xga:hausNrVon>100</xga:hausNrVon>
+                  <xga:hausNrBis>102a</xga:hausNrBis>
+                  <xga:anschriftZusatz>1. Hinterhof, 2. Aufgang</xga:anschriftZusatz>
+                  <xga:ort>Cottbus</xga:ort>
+                  <xga:ortsteil>Sielow</xga:ortsteil>
+                  <xga:plz>03055</xga:plz>
+                  <xga:nationSchluessel>276</xga:nationSchluessel>
+                  <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+               </xga:anschrift>
+               <xga:erreichbarkeit>
+                  <xga:kanal>
+                     <code>01</code>
+                  </xga:kanal>
+                  <xga:kennung>hermes@sielow.de</xga:kennung>
+               </xga:erreichbarkeit>
+            </xga:hauptniederlassung>
+            <xga:beteiligtePerson>
+               <xga:personFunktion>
+                  <code>3</code>
+               </xga:personFunktion>
+               <xga:familienname>Young</xga:familienname>
+               <xga:vorname>John</xga:vorname>
+               <xga:geschlecht listVersionID="1">
+                  <code>
+                     1
+                  </code>
+               </xga:geschlecht>
+               <xga:geburtsdatum>12101960</xga:geburtsdatum>
+               <xga:geburtsort>Boston</xga:geburtsort>
+               <xga:geburtsland>U.S.A.</xga:geburtsland>
+               <xga:anschrift>
+                  <xga:strasse>Schillerstr.</xga:strasse>
+                  <xga:hausNrVon>14</xga:hausNrVon>
+                  <xga:ort>Cottbus</xga:ort>
+                  <xga:plz>03046</xga:plz>
+                  <xga:nationSchluessel>276</xga:nationSchluessel>
+                  <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+               </xga:anschrift>
+               <xga:erreichbarkeit>
+                  <xga:kanal>
+                     <code>01</code>
+                  </xga:kanal>
+                  <xga:kennung>young@aol.com</xga:kennung>
+               </xga:erreichbarkeit>
+            </xga:beteiligtePerson>
+            <xga:beteiligungOeffentlicheHand>                
+               <code>0</code>             
+            </xga:beteiligungOeffentlicheHand>          
+         </xga:gewerbe>
+         <xga:gueltigAb>2013-11-01</xga:gueltigAb>
+         <xga:datumMeldung>2013-11-01</xga:datumMeldung>
+         <xga:taetigkeitenGesamt>
+            <xga:schwerpunkt>
+               <xga:taetigkeitSchwerpunkt>Einzelhandel mit Weinen und Tabakwaren</xga:taetigkeitSchwerpunkt>
+               <xga:taetigkeitSchluessel>47250</xga:taetigkeitSchluessel>
+               <xga:stichwort>Wein, Eh.</xga:stichwort>
+            </xga:schwerpunkt>
+            <xga:weitereTaetigkeiten>
+               <xga:taetigkeitenZusammengefasst>Hermes Paketshop|Handel mit Presseartikeln</xga:taetigkeitenZusammengefasst>
+               <xga:taetigkeit>
+                  <xga:taetigkeitSchluessel>53200</xga:taetigkeitSchluessel>
+                  <xga:stichwort>Paketdienste, private, für Frachtsendungen bis zu einem Höchstgewicht von 31,5 kg</xga:stichwort>
+               </xga:taetigkeit>
+               <xga:taetigkeit>
+                  <xga:taetigkeitSchluessel>47621</xga:taetigkeitSchluessel>
+                  <xga:stichwort>Druckerzeugnisse (Zeitschriften und Zeitungen), Eh.</xga:stichwort>
+               </xga:taetigkeit>
+            </xga:weitereTaetigkeiten>
+         </xga:taetigkeitenGesamt>
+         <xga:kuenftigesGewerbe>
+               <xga:nameFirmaGewerbetreibender>Young GmbH</xga:nameFirmaGewerbetreibender>
+               <xga:anschrift>
+               <xga:strasse>Köpenicker Str.</xga:strasse>
+               <xga:strassenschluessel>0000001031</xga:strassenschluessel>
+               <xga:hausNrVon>8</xga:hausNrVon>
+               <xga:ort>Berlin</xga:ort>
+               <xga:plz>10997</xga:plz>
+               <xga:nationSchluessel>276</xga:nationSchluessel>
+               <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+            </xga:anschrift>
+            </xga:kuenftigesGewerbe>
+         <xga:grundAbmeldungSchluessel>
+            <code>02</code>
+         </xga:grundAbmeldungSchluessel>
+      </xga:abmeldung>
+   </xga:satz>
+</xga:lue.gewerbemeldung.0290>

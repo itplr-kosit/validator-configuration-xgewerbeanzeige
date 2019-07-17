@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xga:alg.gewerbemeldung.0300 xmlns:xga="http://www.xgewerbeanzeige.de/spezifikation/2.1"
+                             produkt="XGA-Testsuite"
+                             produkthersteller="KoSIT"
+                             produktversion="2019"
+                             standard="XGewerbeanzeige"
+                             version="2.1"
+                             test="100">
+   <xga:nachrichtenkopf>
+      <xga:identifikation.nachricht>
+         <xga:nachrichtenUUID>00000000-0000-0000-0000-000000000001</xga:nachrichtenUUID>
+         <xga:nachrichtentyp>
+            <code>0300</code>
+         </xga:nachrichtentyp>
+         <xga:erstellungszeitpunkt>2019-07-17T00:00:00+02:00</xga:erstellungszeitpunkt>
+      </xga:identifikation.nachricht>
+      <xga:leser>
+         <xga:behoerdenkennung>
+            <xga:praefix listVersionID="7"
+                         listURI="urn:xoev-de:bund:bmi:bit:codeliste:dvdv.praefix">
+               <code>xga</code>
+            </xga:praefix>
+            <xga:kennung listURI="urn:xoev-de:xgewerbeanzeige:codeliste:weiterekommunikationspartner"
+                         listVersionID="2018-10-11">
+               <code>121499900001</code>
+            </xga:kennung>
+         </xga:behoerdenkennung>
+         <xga:erreichbarkeit>
+            <xga:kanal listVersionID="3" listURI="urn:de:xoev:codeliste:erreichbarkeit">
+               <code>01</code>
+            </xga:kanal>
+            <xga:kennung>gewerbe@verteilplattform.cottbus.de</xga:kennung>
+         </xga:erreichbarkeit>
+         <xga:erreichbarkeit>
+            <xga:kanal listVersionID="3" listURI="urn:de:xoev:codeliste:erreichbarkeit">
+               <code>09</code>
+            </xga:kanal>
+            <xga:kennung>https://verteilplattform.cottbus.de</xga:kennung>
+         </xga:erreichbarkeit>
+         <xga:anschrift>
+            <xga:strasse>Testallee</xga:strasse>
+            <xga:hausNr>42</xga:hausNr>
+            <xga:ort>Cottbus</xga:ort>
+            <xga:plz>03046</xga:plz>
+         </xga:anschrift>
+         <xga:behoerdenname>Phantasie-Verteilplattform</xga:behoerdenname>   
+      </xga:leser>
+      <xga:autor>
+         <xga:behoerdenkennung>
+            <xga:praefix listVersionID="7"
+                         listURI="urn:xoev-de:bund:bmi:bit:codeliste:dvdv.praefix">
+               <code>MELDID</code>
+            </xga:praefix>
+            <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
+                         listVersionID="2018-01-31">
+               <code>12052000</code>
+            </xga:kennung>
+         </xga:behoerdenkennung>
+         <xga:erreichbarkeit>
+            <xga:kanal listVersionID="3" listURI="urn:de:xoev:codeliste:erreichbarkeit">
+               <code>01</code>
+            </xga:kanal>
+            <xga:kennung>miriam.musterfrau@cottbus.de</xga:kennung>
+         </xga:erreichbarkeit>
+         <xga:erreichbarkeit>
+            <xga:kanal listVersionID="3" listURI="urn:de:xoev:codeliste:erreichbarkeit">
+               <code>02</code>
+            </xga:kanal>
+            <xga:kennung>0355 - 6122840</xga:kennung>
+         </xga:erreichbarkeit>
+         <xga:anschrift>
+            <xga:strasse>Karl-Marx-Str.</xga:strasse>
+            <xga:hausNr>67</xga:hausNr>
+            <xga:ort>Cottbus</xga:ort>
+            <xga:plz>03044</xga:plz>
+         </xga:anschrift>
+         <xga:behoerdenname>Gewerbeamt Cottbus</xga:behoerdenname> 
+      </xga:autor>
+   </xga:nachrichtenkopf>
+   <!-- Testfall 01.004 | Datensatz A | Meldungsart: Anmeldung | Zustand: alpha -->
+   <xga:satz>
+      <xga:anmeldung>
+         <xga:ereigniszeitpunkt>2017-07-07T08:30:00+00:00</xga:ereigniszeitpunkt>
+         <!-- Autor auf Satzebene -->
+         <xga:autor>
+            <xga:behoerdenkennung>
+               <xga:praefix listVersionID="7"
+                            listURI="urn:xoev-de:bund:bmi:bit:codeliste:dvdv.praefix">
+                  <code>MELDID</code>
+               </xga:praefix>
+               <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
+                            listVersionID="2018-01-31">
+                  <code>12052000</code>
+               </xga:kennung>
+            </xga:behoerdenkennung>
+            <xga:erreichbarkeit>
+               <xga:kanal listVersionID="3" listURI="urn:de:xoev:codeliste:erreichbarkeit">
+                  <code>01</code>
+               </xga:kanal>
+               <xga:kennung>miriam.musterfrau@cottbus.de</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:erreichbarkeit>
+               <xga:kanal listVersionID="3" listURI="urn:de:xoev:codeliste:erreichbarkeit">
+                  <code>02</code>
+               </xga:kanal>
+               <xga:kennung>0355 - 6122840</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:anschrift>
+               <xga:strasse>Karl-Marx-Str.</xga:strasse>
+               <xga:hausNr>67</xga:hausNr>
+               <xga:ort>Cottbus</xga:ort>
+               <xga:plz>03044</xga:plz>
+            </xga:anschrift>
+            <xga:behoerdenname>Gewerbeamt Cottbus</xga:behoerdenname> 
+         </xga:autor>
+         <xga:istKorrektur listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                           listVersionID="1">
+            <code>0</code>
+         </xga:istKorrektur>
+         <xga:gemeindeSchluessel listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
+                                 listVersionID="2019-05-31">
+            <code>12052000</code>
+         </xga:gemeindeSchluessel>
+         <xga:gemeindeMeldungNr>2005 1026</xga:gemeindeMeldungNr>
+         <xga:gewerbebetriebID>eef468af-014d-4a20-bb53-8666826a3850</xga:gewerbebetriebID>
+         <xga:uuid>d3e82b8c-0323-4179-ace6-821f2331a9e6</xga:uuid>
+         <xga:gewerbe>
+            <xga:betrieb>
+               <xga:ID>1</xga:ID>
+               <xga:eingetragenerName>Logistik 24 GmbH</xga:eingetragenerName>
+               <xga:eintragungNr>45668</xga:eintragungNr>
+               <xga:eintragungOrt>Cottbus</xga:eintragungOrt>
+               <xga:eintragungPLZ>03046</xga:eintragungPLZ>
+               <xga:eintragungArt listURI="urn:xoev-de:xgewerbeanzeige:codeliste:artdereintragung"
+                                  listVersionID="2">
+                  <code>B</code>
+               </xga:eintragungArt>
+               <xga:gerichtSchluessel listURI="urn:xoev-de:xgewerbeanzeige:codeliste:registergerichte"
+                                      listVersionID="7">
+                  <code>G1103</code>
+               </xga:gerichtSchluessel>
+               <xga:rechtsformSchluessel listURI="urn:xoev-de:xgewerbeanzeige:codeliste:rechtsformen"
+                                         listVersionID="5">
+                  <code>350</code>
+               </xga:rechtsformSchluessel>
+            </xga:betrieb>
+            <xga:anzahlBeteiligte>1</xga:anzahlBeteiligte>
+            <xga:anzahlVollzeitBeschaeftigte>0</xga:anzahlVollzeitBeschaeftigte>
+            <xga:anzahlTeilzeitBeschaeftigte>0</xga:anzahlTeilzeitBeschaeftigte>
+            <xga:betriebArt>
+               <xga:industrie listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                              listVersionID="1">
+                  <code>0</code>
+               </xga:industrie>
+               <xga:handwerk listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                             listVersionID="1">
+                  <code>0</code>
+               </xga:handwerk>
+               <xga:handel listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                           listVersionID="1">
+                  <code>0</code>
+               </xga:handel>
+               <xga:sonstiges listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                              listVersionID="1">
+                  <code>1</code>
+               </xga:sonstiges>
+            </xga:betriebArt>
+            <xga:niederlassungArt listURI="urn:xoev-de:xgewerbeanzeige:codeliste:artderniederlassung"
+                                  listVersionID="1">
+               <code>1</code>
+            </xga:niederlassungArt>
+            <xga:istReisegewerbe listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                                 listVersionID="1">
+               <code>0</code>
+            </xga:istReisegewerbe>
+            <xga:istNebenerwerb listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                                listVersionID="1">
+               <code>0</code>
+            </xga:istNebenerwerb>
+            <xga:anschrift>
+               <xga:strasse>Birkenwaldstr.</xga:strasse>
+               <xga:strassenschluessel>0000001301</xga:strassenschluessel>
+               <xga:hausNrVon>20d</xga:hausNrVon>
+               <xga:ort>Cottbus</xga:ort>
+               <xga:plz>03046</xga:plz>
+               <xga:nationSchluessel>276</xga:nationSchluessel>
+               <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+            </xga:anschrift>
+            <xga:beteiligtePerson>
+               <xga:personFunktion listURI="urn:xoev-de:xgewerbeanzeige:codeliste:funktioneinerperson"
+                                   listVersionID="1">
+                  <code>3</code>
+               </xga:personFunktion>
+               <xga:familienname>Hold</xga:familienname>
+               <xga:vorname>Detlef</xga:vorname>
+               <xga:geschlecht listURI="urn:xoev-de:xgewerbeanzeige:codeliste:geschlecht"
+                               listVersionID="3">
+                  <code>1</code>
+               </xga:geschlecht>
+               <xga:geburtsdatum>03111965</xga:geburtsdatum>
+               <xga:geburtsort>Worms</xga:geburtsort>
+               <xga:geburtsland>Deutschland</xga:geburtsland>
+               <xga:staatangehoerigkeiten>
+                  <xga:staatsangehoerigkeitSchluessel listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staatsangehoerigkeit"
+                                                      listVersionID="2019-04-01">
+                     <code>000</code>
+                  </xga:staatsangehoerigkeitSchluessel>
+               </xga:staatangehoerigkeiten>
+               <xga:anschrift>
+                  <xga:strasse>Obertshäuserstr.</xga:strasse>
+                  <xga:hausNrVon>72</xga:hausNrVon>
+                  <xga:ort>Mühlheim</xga:ort>
+                  <xga:plz>63165</xga:plz>
+                  <xga:nationSchluessel>276</xga:nationSchluessel>
+                  <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+               </xga:anschrift>
+            </xga:beteiligtePerson>
+            <xga:beteiligungOeffentlicheHand listURI="urn:xoev-de:xgewerbeanzeige:codeliste:beteiligungoeffentlichehand"
+                                             listVersionID="1">
+               <code>0</code>
+            </xga:beteiligungOeffentlicheHand>
+         </xga:gewerbe>
+         <xga:gueltigAb>2017-08-01</xga:gueltigAb>
+         <xga:datumMeldung>2017-07-06</xga:datumMeldung>
+         <xga:taetigkeitenGesamt>
+            <xga:schwerpunkt>
+               <xga:taetigkeitSchwerpunkt>Spedition</xga:taetigkeitSchwerpunkt>
+               <xga:taetigkeitSchluessel>52291</xga:taetigkeitSchluessel>
+               <xga:stichwort>Speditionen</xga:stichwort>
+            </xga:schwerpunkt>
+         </xga:taetigkeitenGesamt>
+         <xga:grundAnmeldungSchluessel listURI="urn:xoev-de:xgewerbeanzeige:codeliste:grundfueranmeldung"
+                                       listVersionID="2">
+            <code>01</code>
+         </xga:grundAnmeldungSchluessel>
+      </xga:anmeldung>
+   </xga:satz>
+   <!-- Testfall 01.004 | Datensatz B | Meldungsart: Ummeldung | Zustand: alpha -->
+   <xga:satz>
+      <xga:ummeldung>
+         <xga:satzErstellung>2017-11-15T15:00:12+00:00</xga:satzErstellung>
+         <xga:ereigniszeitpunkt>2017-11-15T14:59:47+00:00</xga:ereigniszeitpunkt>
+         <!-- Autor auf Satzebene -->
+         <xga:autor>
+            <xga:behoerdenkennung>
+               <xga:praefix listVersionID="7"
+                            listURI="urn:xoev-de:bund:bmi:bit:codeliste:dvdv.praefix">
+                  <code>MELDID</code>
+               </xga:praefix>
+               <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
+                            listVersionID="2018-01-31">
+                  <code>12052000</code>
+               </xga:kennung>
+            </xga:behoerdenkennung>
+            <xga:erreichbarkeit>
+               <xga:kanal listVersionID="3" listURI="urn:de:xoev:codeliste:erreichbarkeit">
+                  <code>01</code>
+               </xga:kanal>
+               <xga:kennung>miriam.musterfrau@cottbus.de</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:erreichbarkeit>
+               <xga:kanal listVersionID="3" listURI="urn:de:xoev:codeliste:erreichbarkeit">
+                  <code>02</code>
+               </xga:kanal>
+               <xga:kennung>0355 - 6122840</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:anschrift>
+               <xga:strasse>Karl-Marx-Str.</xga:strasse>
+               <xga:hausNr>67</xga:hausNr>
+               <xga:ort>Cottbus</xga:ort>
+               <xga:plz>03044</xga:plz>
+            </xga:anschrift>
+            <xga:behoerdenname>Gewerbeamt Cottbus</xga:behoerdenname> 
+         </xga:autor>
+         <xga:istKorrektur listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                           listVersionID="1">
+            <code>0</code>
+         </xga:istKorrektur>
+         <xga:gemeindeSchluessel listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags"
+                                 listVersionID="2019-05-31">
+            <code>12052000</code>
+         </xga:gemeindeSchluessel>
+         <xga:gemeindeMeldungNr>2005 1026</xga:gemeindeMeldungNr>
+         <xga:gewerbebetriebID>eef468af-014d-4a20-bb53-8666826a3850</xga:gewerbebetriebID>
+         <xga:uuid>8b618298-09c8-40d4-9cd8-3126cb9166ec</xga:uuid>
+         <xga:gewerbe>
+            <xga:betrieb>
+               <xga:ID>1</xga:ID>
+               <xga:eingetragenerName>Logistik 24 GmbH</xga:eingetragenerName>
+               <xga:eintragungNr>45668</xga:eintragungNr>
+               <xga:eintragungOrt>Cottbus</xga:eintragungOrt>
+               <xga:eintragungPLZ>03046</xga:eintragungPLZ>
+               <xga:eintragungArt listURI="urn:xoev-de:xgewerbeanzeige:codeliste:artdereintragung"
+                                  listVersionID="2">
+                  <code>B</code>
+               </xga:eintragungArt>
+               <xga:gerichtSchluessel listURI="urn:xoev-de:xgewerbeanzeige:codeliste:registergerichte"
+                                      listVersionID="7">
+                  <code>G1103</code>
+               </xga:gerichtSchluessel>
+               <xga:rechtsformSchluessel listURI="urn:xoev-de:xgewerbeanzeige:codeliste:rechtsformen"
+                                         listVersionID="5">
+                  <code>350</code>
+               </xga:rechtsformSchluessel>
+            </xga:betrieb>
+            <xga:anzahlBeteiligte>1</xga:anzahlBeteiligte>
+            <xga:anzahlVollzeitBeschaeftigte>0</xga:anzahlVollzeitBeschaeftigte>
+            <xga:anzahlTeilzeitBeschaeftigte>0</xga:anzahlTeilzeitBeschaeftigte>
+            <xga:betriebArt>
+               <xga:industrie listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                              listVersionID="1">
+                  <code>0</code>
+               </xga:industrie>
+               <xga:handwerk listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                             listVersionID="1">
+                  <code>0</code>
+               </xga:handwerk>
+               <xga:handel listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                           listVersionID="1">
+                  <code>0</code>
+               </xga:handel>
+               <xga:sonstiges listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                              listVersionID="1">
+                  <code>1</code>
+               </xga:sonstiges>
+            </xga:betriebArt>
+            <xga:niederlassungArt listURI="urn:xoev-de:xgewerbeanzeige:codeliste:artderniederlassung"
+                                  listVersionID="1">
+               <code>1</code>
+            </xga:niederlassungArt>
+            <xga:istReisegewerbe listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                                 listVersionID="1">
+               <code>0</code>
+            </xga:istReisegewerbe>
+            <xga:istNebenerwerb listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                                listVersionID="1">
+               <code>0</code>
+            </xga:istNebenerwerb>
+            <xga:anschrift>
+               <xga:strasse>Birkenwaldstr.</xga:strasse>
+               <xga:strassenschluessel>0000001301</xga:strassenschluessel>
+               <xga:hausNrVon>20d</xga:hausNrVon>
+               <xga:ort>Cottbus</xga:ort>
+               <xga:plz>03046</xga:plz>
+               <xga:nationSchluessel>276</xga:nationSchluessel>
+               <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+            </xga:anschrift>
+            <xga:beteiligtePerson>
+               <xga:personFunktion listURI="urn:xoev-de:xgewerbeanzeige:codeliste:funktioneinerperson"
+                                   listVersionID="1">
+                  <code>3</code>
+               </xga:personFunktion>
+               <xga:familienname>Hold</xga:familienname>
+               <xga:vorname>Detlef</xga:vorname>
+               <xga:geschlecht listURI="urn:xoev-de:xgewerbeanzeige:codeliste:geschlecht"
+                               listVersionID="3">
+                  <code>1</code>
+               </xga:geschlecht>
+               <xga:geburtsdatum>03111965</xga:geburtsdatum>
+               <xga:geburtsort>Worms</xga:geburtsort>
+               <xga:geburtsland>Deutschland</xga:geburtsland>
+               <xga:staatangehoerigkeiten>
+                  <xga:staatsangehoerigkeitSchluessel listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staatsangehoerigkeit"
+                                                      listVersionID="2019-04-01">
+                     <code>000</code>
+                  </xga:staatsangehoerigkeitSchluessel>
+               </xga:staatangehoerigkeiten>
+               <xga:anschrift>
+                  <xga:strasse>Obertshäuserstr.</xga:strasse>
+                  <xga:hausNrVon>72</xga:hausNrVon>
+                  <xga:ort>Mühlheim</xga:ort>
+                  <xga:plz>63165</xga:plz>
+                  <xga:nationSchluessel>276</xga:nationSchluessel>
+                  <xga:natSchluesselVerzeichnis>NAT112013</xga:natSchluesselVerzeichnis>
+               </xga:anschrift>
+            </xga:beteiligtePerson>
+            <xga:beteiligungOeffentlicheHand listURI="urn:xoev-de:xgewerbeanzeige:codeliste:beteiligungoeffentlichehand"
+                                             listVersionID="1">
+               <code>0</code>
+            </xga:beteiligungOeffentlicheHand>
+         </xga:gewerbe>
+         <xga:gueltigAb>2017-12-01</xga:gueltigAb>
+         <xga:datumMeldung>2017-11-15</xga:datumMeldung>
+         <xga:taetigkeitenGesamt>
+            <xga:schwerpunkt>
+               <xga:taetigkeitSchwerpunkt>Logistikberatung</xga:taetigkeitSchwerpunkt>
+               <xga:taetigkeitSchluessel>70220</xga:taetigkeitSchluessel>
+               <xga:stichwort>Beratung in Logistik</xga:stichwort>
+               <xga:neuAusgeuebt listURI="urn:xoev-de:xgewerbeanzeige:codeliste:janein"
+                                 listVersionID="1">
+                  <code>1</code>
+               </xga:neuAusgeuebt>
+            </xga:schwerpunkt>
+         </xga:taetigkeitenGesamt>
+         <xga:bisherigeUnfallversicherung>
+            <xga:traeger listURI="urn:xoev-de:xgewerbeanzeige:codeliste:unfallversicherungstraeger"
+                         listVersionID="2">
+               <code>03</code>
+            </xga:traeger>
+            <xga:mitgliedsnummer>34562987654.7</xga:mitgliedsnummer>
+         </xga:bisherigeUnfallversicherung>
+         <xga:gruendeUmmeldung>
+            <xga:grundUmmeldungSchluessel listURI="urn:xoev-de:xgewerbeanzeige:codeliste:grundfuerummeldung"
+                                          listVersionID="2">
+               <code>02</code>
+            </xga:grundUmmeldungSchluessel>
+         </xga:gruendeUmmeldung>
+      </xga:ummeldung>
+   </xga:satz>
+</xga:alg.gewerbemeldung.0300>
