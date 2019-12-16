@@ -8,6 +8,7 @@ Die Konfiguration beinhaltet Prüfszenarien für:
  * XGewerbeanzeige 1.3
  * XGewerbeanzeige 2.0
  * XGewerbeanzeige 2.1
+ * XGewerbeanzeige 2.2 (Entwurf)
 
 Eine detaillierte Beschreibung des Prüftools findet sich [hier](https://github.com/itplr-kosit/validator). 
 
@@ -16,7 +17,7 @@ Eine detaillierte Beschreibung des Prüftools findet sich [hier](https://github.
 1. Die [Stand-alone Fassung des
 Prüftools](https://github.com/itplr-kosit/validator/releases/download/v1.1.0/validationtool-1.1.0.zip)  herunterladen und
 auspacken.
-2. Die [Prüftool-Konfiguration XGewerbeanzeige](https://github.com/itplr-kosit/validator-configuration-xgewerbeanzeige/releases/download/release-2019-07-31/validator-configuration-xgewerbeanzeige_2019-07-31.zip) herunterladen und auspacken.
+2. Die [Prüftool-Konfiguration XGewerbeanzeige](https://github.com/itplr-kosit/validator-configuration-xgewerbeanzeige/releases/download/release-2019-12-16/validator-configuration-xgewerbeanzeige_2019-12-16.zip) herunterladen und auspacken.
 3. Mitgelieferte Beispielinstanzen validieren:
 ```
 java -jar validationtool-1.1.0-standalone.jar -s scenarios.xml -o reports -h beispiele/*.xml
