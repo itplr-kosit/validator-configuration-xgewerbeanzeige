@@ -82,6 +82,30 @@
         </createReport>
     </scenario>
     
+    <scenario>
+        <name>XGewerbeanzeige 2.2 (Entwurf)</name>
+        <namespace prefix="xga">http://www.xgewerbeanzeige.de/spezifikation/2.2</namespace>
+        <match>/xga:*</match>
+        <validateWithXmlSchema>
+            <resource>
+                <name>XGewerbeanzeige 2.2 XML Schema</name>
+                <location>resources/xgewerbeanzeige-2.2/xgewerbeanzeige.xsd</location>
+            </resource>
+        </validateWithXmlSchema>
+        <validateWithSchematron>
+            <resource>
+                <name>XGewerbeanzeige 2.2 Schematron</name>
+                <location>resources/xgewerbeanzeige-2.2/spezifikation.xsl</location>
+            </resource>
+        </validateWithSchematron>
+        <createReport>
+            <resource>
+                <name>Standard-Prüfbericht</name>
+                <location>resources/default-report.xsl</location>
+            </resource>
+        </createReport>
+    </scenario>
+
 
     <noScenarioReport>
         <resource>
