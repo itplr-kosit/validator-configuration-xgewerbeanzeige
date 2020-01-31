@@ -83,7 +83,7 @@
     </scenario>
     
     <scenario>
-        <name>XGewerbeanzeige 2.2 (Entwurf)</name>
+        <name>XGewerbeanzeige 2.2</name>
         <namespace prefix="xga">http://www.xgewerbeanzeige.de/spezifikation/2.2</namespace>
         <match>/xga:*</match>
         <validateWithXmlSchema>

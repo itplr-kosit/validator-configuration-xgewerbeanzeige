@@ -14,9 +14,9 @@
     <property name="validationtool.jar" value="validationtool-1.0.1-standalone.jar"/>
 
     <property name="saxon.jar" value="saxon9he.jar"/>
-    <property name="xga-2.2.dir" location="C:/fb/svn/gewerbeverordnung/spezifikation/trunk"/>
-    <property name="xga-2.1.dir" location="C:/fb/svn/gewerbeverordnung/spezifikation/branches/Release-2.1"/>
-    <property name="xga-2.0.dir" location="C:/fb/svn/gewerbeverordnung/spezifikation/branches/Release-2.0"/>
+    <property name="xga-2.2.dir" location="${svn.base.dir}/spezifikation/trunk"/>
+    <property name="xga-2.1.dir" location="${svn.base.dir}/spezifikation/branches/Release-2.1"/>
+    <property name="xga-2.0.dir" location="${svn.base.dir}/spezifikation/branches/Release-2.0"/>
 
 
     <property name="xgewerbeanzeige-1.3.download.url.prefix" value="http://xgewerbeanzeige.de/wp-content/uploads/2018/05/"/>
