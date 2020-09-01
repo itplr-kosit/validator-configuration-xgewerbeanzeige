@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Der chilenische Staatsbürger und eingetragene Kaufmann Tibor Pick, geb. Rodríguez, meldet ein Gewerbe als Friseur 
+     mit weiteren Tätigkeiten (Verkauf von Haarpflegeprodukten und Make-Up-Beratung) an. Die benötigte Handwerkskarte 
+	 und ein Aufenthaltstitel liegen vor. -->
+<xga:abh.gewerbemeldung.0500 xmlns:xga="http://www.xgewerbeanzeige.de/spezifikation/2.2" produkt="XGA-Testsuite" produkthersteller="KoSIT"
+   produktversion="2019" standard="XGewerbeanzeige" version="2.2" test="100">
+   <xga:nachrichtenkopf>
+      <xga:identifikation.nachricht>
+         <xga:nachrichtenUUID>00000000-0000-0000-0000-000000000001</xga:nachrichtenUUID>
+         <xga:nachrichtentyp>
+            <code>0500</code>
+         </xga:nachrichtentyp>
+         <xga:erstellungszeitpunkt>2019-10-24T00:00:00+02:00</xga:erstellungszeitpunkt>
+      </xga:identifikation.nachricht>
+      <xga:leser>
+         <xga:behoerdenkennung>
+            <xga:praefix listVersionID="7">
+               <code>azr</code>
+            </xga:praefix>
+            <xga:kennung listURI="urn:de:xauslaender:codelist:abhkennung" listVersionID="14">
+               <code>000100</code>
+            </xga:kennung>
+         </xga:behoerdenkennung>
+         <xga:erreichbarkeit>
+            <xga:kanal>
+               <code>01</code>
+            </xga:kanal>
+            <xga:kennung>gewerbe@verteilplattform.cottbus.de</xga:kennung>
+         </xga:erreichbarkeit>
+         <xga:erreichbarkeit>
+            <xga:kanal>
+               <code>09</code>
+            </xga:kanal>
+            <xga:kennung>https://verteilplattform.cottbus.de</xga:kennung>
+         </xga:erreichbarkeit>
+         <xga:anschrift>
+            <xga:strasse>Testallee</xga:strasse>
+            <xga:hausNr>42</xga:hausNr>
+            <xga:ort>Cottbus</xga:ort>
+            <xga:plz>03046</xga:plz>
+         </xga:anschrift>
+         <xga:behoerdenname>Phantasie-Verteilplattform</xga:behoerdenname>
+      </xga:leser>
+      <xga:autor>
+         <xga:behoerdenkennung>
+            <xga:praefix listVersionID="7">
+               <code>MELDID</code>
+            </xga:praefix>
+            <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags" listVersionID="2018-01-31">
+               <code>12052000</code>
+            </xga:kennung>
+         </xga:behoerdenkennung>
+         <xga:erreichbarkeit>
+            <xga:kanal>
+               <code>01</code>
+            </xga:kanal>
+            <xga:kennung>miriam.musterfrau@cottbus.de</xga:kennung>
+         </xga:erreichbarkeit>
+         <xga:erreichbarkeit>
+            <xga:kanal>
+               <code>02</code>
+            </xga:kanal>
+            <xga:kennung>0355 - 6122840</xga:kennung>
+         </xga:erreichbarkeit>
+         <xga:anschrift>
+            <xga:strasse>Karl-Marx-Str.</xga:strasse>
+            <xga:hausNr>67</xga:hausNr>
+            <xga:ort>Cottbus</xga:ort>
+            <xga:plz>03044</xga:plz>
+         </xga:anschrift>
+         <xga:behoerdenname>Gewerbeamt Cottbus</xga:behoerdenname>
+      </xga:autor>
+   </xga:nachrichtenkopf>
+   <!-- Testfall 01.002 | Datensatz A | Meldungsart: Anmeldung | Zustand: alpha -->
+   <xga:satz>
+      <xga:anmeldung>
+         <xga:satzErstellung>2016-07-04T17:54:42+00:00</xga:satzErstellung>
+         <xga:ereigniszeitpunkt>2016-07-04T15:00:42+00:00</xga:ereigniszeitpunkt>
+         <!-- Autor auf Satzebene -->
+         <xga:autor>
+            <xga:behoerdenkennung>
+               <xga:praefix listVersionID="7">
+                  <code>MELDID</code>
+               </xga:praefix>
+               <xga:kennung listURI="urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:ags" listVersionID="2018-01-31">
+                  <code>12052000</code>
+               </xga:kennung>
+            </xga:behoerdenkennung>
+            <xga:erreichbarkeit>
+               <xga:kanal>
+                  <code>01</code>
+               </xga:kanal>
+               <xga:kennung>miriam.musterfrau@cottbus.de</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:erreichbarkeit>
+               <xga:kanal>
+                  <code>02</code>
+               </xga:kanal>
+               <xga:kennung>0355 - 6122840</xga:kennung>
+            </xga:erreichbarkeit>
+            <xga:anschrift>
+               <xga:strasse>Karl-Marx-Str.</xga:strasse>
+               <xga:hausNr>67</xga:hausNr>
+               <xga:ort>Cottbus</xga:ort>
+               <xga:plz>03044</xga:plz>
+            </xga:anschrift>
+            <xga:behoerdenname>Gewerbeamt Cottbus</xga:behoerdenname>
+         </xga:autor>
+         <xga:istKorrektur>
+            <code>0</code>
+         </xga:istKorrektur>
+         <xga:gemeindeSchluessel listVersionID="2019-05-31">
+            <code>12052000</code>
+         </xga:gemeindeSchluessel>
+         <xga:gemeindeMeldungNr>2015 1023</xga:gemeindeMeldungNr>
+         <xga:gewerbebetriebID>0c9003a6-5b4f-4a99-98ae-b2b915708c1d</xga:gewerbebetriebID>
+         <xga:uuid>5687CF4A-5C7B-43F1-933E-E5A7F69F7967</xga:uuid>
+         <xga:gewerbe>
+            <xga:betrieb>
+               <xga:ID>1</xga:ID>
+               <xga:eingetragenerName>Tibor Pick e.K.</xga:eingetragenerName>
+               <xga:eintragungNr>11111</xga:eintragungNr>
+               <xga:eintragungOrt>Cottbus</xga:eintragungOrt>
+               <xga:eintragungPLZ>03046</xga:eintragungPLZ>
+               <xga:eintragungArt>
+                  <code>A</code>
+               </xga:eintragungArt>
+               <xga:gerichtSchluessel listVersionID="5">
+                  <code>G1103</code>
+               </xga:gerichtSchluessel>
+               <xga:rechtsformSchluessel>
+                  <code>170</code>
+               </xga:rechtsformSchluessel>
+            </xga:betrieb>
+            <xga:anzahlVollzeitBeschaeftigte>0</xga:anzahlVollzeitBeschaeftigte>
+            <xga:anzahlTeilzeitBeschaeftigte>2</xga:anzahlTeilzeitBeschaeftigte>
+            <xga:niederlassungArt>
+               <code>1</code>
+            </xga:niederlassungArt>
+            <xga:istReisegewerbe>
+               <code>0</code>
+            </xga:istReisegewerbe>
+            <xga:istNebenerwerb>
+               <code>0</code>
+            </xga:istNebenerwerb>
+            <xga:handwerkskarte>
+               <xga:status>
+                  <code>1</code>
+               </xga:status>
+               <xga:ausgestelltAm>2012-03-01</xga:ausgestelltAm>
+               <xga:ausgestelltVonPLZ>03046</xga:ausgestelltVonPLZ>
+               <xga:ausgestelltVonOrt>Cottbus</xga:ausgestelltVonOrt>
+               <xga:ausgestelltVonSchluessel>
+                  <code>00007</code>
+               </xga:ausgestelltVonSchluessel>
+            </xga:handwerkskarte>
+            <xga:anschrift>
+               <xga:strasse>Spremberger Str.</xga:strasse>
+               <xga:strassenschluessel>0000001801</xga:strassenschluessel>
+               <xga:hausNrVon>90</xga:hausNrVon>
+               <xga:ort>Cottbus</xga:ort>
+               <xga:plz>03046</xga:plz>
+               <xga:nationSchluessel listVersionID="2">
+                  <code>276</code>
+               </xga:nationSchluessel>
+
+            </xga:anschrift>
+            <xga:beteiligtePerson>
+               <xga:personFunktion>
+                  <code>1</code>
+               </xga:personFunktion>
+               <xga:vorname>Tibor</xga:vorname>
+               <xga:geschlecht listVersionID="3">
+                  <code>1</code>
+               </xga:geschlecht>
+               <xga:geburtsname>Rodríguez</xga:geburtsname>
+               <xga:geburtsdatum>12101965</xga:geburtsdatum>
+               <xga:geburtsort>Santiago</xga:geburtsort>
+               <xga:geburtsland>Chile</xga:geburtsland>
+               <xga:staatangehoerigkeiten>
+                  <xga:staatsangehoerigkeitSchluessel listVersionID="2019-04-01">
+                     <code>332</code>
+                  </xga:staatsangehoerigkeitSchluessel>
+               </xga:staatangehoerigkeiten>
+               <xga:anschrift>
+                  <xga:strasse>Ewald-Hase-Str.</xga:strasse>
+                  <xga:hausNrVon>4</xga:hausNrVon>
+                  <xga:ort>Cottbus</xga:ort>
+                  <xga:plz>03044</xga:plz>
+                  <xga:nationSchluessel listVersionID="2">
+                     <code>276</code>
+                  </xga:nationSchluessel>
+
+               </xga:anschrift>
+               <xga:erreichbarkeit>
+                  <xga:kanal>
+                     <code>02</code>
+                  </xga:kanal>
+                  <xga:kennung>0355 141455</xga:kennung>
+               </xga:erreichbarkeit>
+               <xga:aufenthaltstitel>
+                  <xga:status>
+                     <code>1</code>
+                  </xga:status>
+                  <xga:ausgestelltAm>2002-01-02</xga:ausgestelltAm>
+                  <xga:ausgestelltVonName>Stadt Cottbus</xga:ausgestelltVonName>
+                  <xga:ausgestelltVonPLZ>03044</xga:ausgestelltVonPLZ>
+                  <xga:ausgestelltVonOrt>Cottbus</xga:ausgestelltVonOrt>
+               </xga:aufenthaltstitel>
+            </xga:beteiligtePerson>
+         </xga:gewerbe>
+         <xga:gueltigAb>2016-08-01</xga:gueltigAb>
+         <xga:datumMeldung>2016-07-02</xga:datumMeldung>
+         <xga:taetigkeitenGesamt>
+            <xga:schwerpunkt>
+               <xga:taetigkeitSchwerpunkt>Friseur</xga:taetigkeitSchwerpunkt>
+               <xga:taetigkeitSchluessel>96021</xga:taetigkeitSchluessel>
+               <xga:stichwort>Friseurgewerbe (Damen- und Herrenfriseursalons)</xga:stichwort>
+            </xga:schwerpunkt>
+            <xga:weitereTaetigkeiten>
+               <xga:taetigkeitenZusammengefasst>Verkauf von Haarpflegeprodukten|Make-up-Beratung</xga:taetigkeitenZusammengefasst>
+            </xga:weitereTaetigkeiten>
+         </xga:taetigkeitenGesamt>
+         <xga:grundAnmeldungSchluessel>
+            <code>01</code>
+         </xga:grundAnmeldungSchluessel>
+      </xga:anmeldung>
+   </xga:satz>
+</xga:abh.gewerbemeldung.0500>
