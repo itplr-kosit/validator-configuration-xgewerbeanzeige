@@ -1,3 +1,7 @@
+# Wichtig
+
+Die Prüftoolkonfigurationen werden künftig im XRepository bereitgestellt (https://www.xrepository.de/details/urn:xoev-de:kosit:standard:xgewerbeordnung).
+
 # Prüftoolkonfiguration XGewerbeanzeige
 
 Konfiguration für das von der KoSIT im Auftrag des IT-Planungsrates herausgegebene Prüftool, 
